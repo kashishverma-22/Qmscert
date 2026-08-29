@@ -45,7 +45,7 @@
   font-size: clamp(42px, 3.8vw, 66px);
   line-height: 1.12;
   letter-spacing: -3px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .about-page-hero h1 span {
@@ -650,2511 +650,1389 @@
 }
 
 /* =========================================================
-   QMSCERT ABOUT PAGE
-   COMPLETE RESPONSIVE CSS
+   ABOUT PAGE RESPONSIVE
    1200px → 200px
 ========================================================= */
 
 /* =========================================================
-   LARGE LAPTOP
    1200px
 ========================================================= */
 
 @media (max-width: 1200px) {
-  :root {
-    --container: 1120px;
+  .about-page-grid {
+    gap: 60px;
   }
 
-  .container {
-    width: min(92%, 1120px);
+  .about-page-hero-content {
+    max-width: 760px;
   }
 
-  /* HEADER */
-
-  .navbar {
-    gap: 18px;
+  .about-page-hero h1 {
+    font-size: clamp(40px, 5vw, 60px);
   }
 
-  .nav-menu {
-    gap: 0;
-  }
-
-  .nav-link,
-  .dropdown-toggle {
-    padding: 10px 8px;
-    font-size: 12px;
-  }
-
-  .nav-btn {
-    padding: 0 14px;
-    font-size: 11px;
-  }
-
-  /* HERO */
-
-  .hero {
-    min-height: 600px;
-  }
-
-  .hero-grid {
-    min-height: 600px;
-    gap: 30px;
-  }
-
-  .hero-content {
-    padding: 55px 0;
-  }
-
-  .hero h1 {
-    font-size: clamp(44px, 5vw, 62px);
-  }
-
-  .hero-content > p {
-    font-size: 15px;
-  }
-
-  .hero-visual {
-    min-height: 520px;
-  }
-
-  .ring-one {
-    width: 450px;
-    height: 450px;
-  }
-
-  .ring-two {
-    width: 350px;
-    height: 350px;
-  }
-
-  .certificate-visual {
-    width: 360px;
-    min-height: 420px;
-  }
-
-  /* SECTIONS */
-
-  .about-intro,
-  .certifications,
-  .why-us,
-  .compliance,
-  .industries,
-  .process,
-  .recognition,
-  .consultation {
-    padding: 85px 0;
-  }
-
-  .section-heading {
-    margin-bottom: 42px;
-  }
-
-  .about-grid {
-    gap: 55px;
-  }
-
-  .about-card {
+  .about-main-card {
     width: 350px;
   }
 
-  /* CERTIFICATIONS */
-
-  .cert-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-  }
-
-  .cert-card {
-    padding: 22px;
-  }
-
-  /* WHY */
-
-  .why-grid {
-    gap: 15px;
-  }
-
-  .why-card {
-    padding: 24px;
-  }
-
-  /* COMPLIANCE */
-
-  .compliance-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* INDUSTRIES */
-
-  .industry-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* RECOGNITION */
-
-  .recognition-grid,
-  .consultation-grid {
-    gap: 55px;
-  }
-
-  /* FOOTER */
-
-  .footer-grid {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 30px;
-  }
-
-  .footer-company {
-    grid-column: span 1;
-  }
-}
-
-/* =========================================================
-   TABLET / SMALL LAPTOP
-   992px
-========================================================= */
-
-@media (max-width: 992px) {
-  .container {
-    width: min(92%, 900px);
-  }
-
-  /* TOPBAR */
-
-  .topbar-left,
-  .topbar-right {
-    gap: 15px;
-  }
-
-  /* HEADER */
-
-  .navbar {
-    min-height: 78px;
-  }
-
-  .brand img {
-    width: 92px;
-    height: 58px;
-  }
-
-  .nav-menu {
-    gap: 0;
-  }
-
-  .nav-link,
-  .dropdown-toggle {
-    padding: 9px 6px;
-    font-size: 11px;
-  }
-
-  .nav-btn {
-    min-height: 40px;
-    padding: 0 11px;
-    font-size: 10px;
-  }
-
-  /* HERO */
-
-  .hero {
-    min-height: auto;
-  }
-
-  .hero-grid {
-    min-height: auto;
-    grid-template-columns: 1fr 0.9fr;
-    gap: 25px;
-    padding: 50px 0;
-  }
-
-  .hero-content {
-    padding: 25px 0;
-  }
-
-  .hero h1 {
-    margin: 16px 0;
-    font-size: clamp(38px, 5.5vw, 54px);
-    letter-spacing: -2.5px;
-  }
-
-  .hero-content > p {
-    font-size: 13px;
-    line-height: 1.75;
-  }
-
-  .hero-buttons {
-    margin-top: 25px;
-  }
-
-  .hero-trust {
-    gap: 14px;
-    margin-top: 28px;
-  }
-
-  .hero-trust div {
-    font-size: 10px;
-  }
-
-  .hero-visual {
-    min-height: 450px;
-  }
-
-  .ring-one {
-    width: 380px;
-    height: 380px;
-  }
-
-  .ring-two {
-    width: 300px;
-    height: 300px;
-  }
-
-  .certificate-visual {
-    width: 315px;
-    min-height: 390px;
-    padding: 16px;
-  }
-
-  .certificate-body {
-    min-height: 285px;
-    padding: 28px 15px;
-  }
-
-  .certificate-body h2 {
-    font-size: 52px;
-  }
-
-  .box-one {
-    left: -10px;
-    top: 70px;
-  }
-
-  .box-two {
-    right: -10px;
-    bottom: 55px;
-  }
-
-  /* TRUST */
-
-  .trust-inner {
-    padding: 15px 0;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .standard-tags {
-    justify-content: center;
-  }
-
-  /* STATS */
-
-  .stats {
-    padding: 25px 0;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stat-card:nth-child(2) {
-    border-right: 0;
-  }
-
-  .stat-card:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* COMMON SECTIONS */
-
-  .about-intro,
-  .certifications,
-  .why-us,
-  .compliance,
-  .industries,
-  .process,
-  .recognition,
-  .consultation {
-    padding: 75px 0;
-  }
-
-  .section-heading {
-    margin-bottom: 38px;
-    gap: 25px;
-  }
-
-  .section-heading h2,
-  .about-content h2,
-  .recognition h2,
-  .consultation-content h2 {
-    font-size: clamp(30px, 4vw, 42px);
-    letter-spacing: -1.5px;
-  }
-
-  /* ABOUT */
-
-  .about-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-  }
-
-  .about-content > p {
-    font-size: 13px;
-  }
-
-  .check-list {
-    gap: 10px;
-  }
-
-  .about-visual {
-    min-height: 400px;
-  }
-
-  .about-card {
-    width: 310px;
-    min-height: 330px;
-    padding: 32px;
-  }
-
-  .about-card h3 {
-    font-size: 26px;
-  }
-
-  .about-small-card {
-    right: -5px;
-  }
-
-  /* CERTIFICATIONS */
-
-  .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cert-card p {
-    min-height: auto;
-    margin-bottom: 18px;
-  }
-
-  /* WHY */
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .why-card {
-    min-height: 230px;
-  }
-
-  /* COMPLIANCE */
-
-  .compliance-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* INDUSTRIES */
-
-  .industry-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* PROCESS */
-
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px 25px;
-  }
-
-  .process-arrow {
-    display: none;
-  }
-
-  /* RECOGNITION */
-
-  .recognition-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-  }
-
-  /* CONSULTATION */
-
-  .consultation-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-  }
-
-  .form-card {
-    padding: 28px;
-  }
-
-  /* CTA */
-
-  .cta {
-    padding: 60px 0;
-  }
-
-  .cta-inner {
-    gap: 25px;
-  }
-
-  /* FOOTER */
-
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-  }
-
-  .footer-company {
-    grid-column: span 2;
-  }
-}
-
-/* =========================================================
-   TABLET
-   768px
-========================================================= */
-
-@media (max-width: 768px) {
-  .container {
-    width: min(92%, 700px);
-  }
-
-  /* TOPBAR */
-
-  .topbar {
-    font-size: 10px;
-  }
-
-  .topbar-inner {
-    min-height: 36px;
-    justify-content: center;
-  }
-
-  .topbar-left {
-    display: none;
-  }
-
-  .topbar-right {
-    gap: 12px;
-  }
-
-  .topbar-right a {
-    font-size: 10px;
-  }
-
-  /* HEADER */
-
-  .navbar {
-    min-height: 72px;
-  }
-
-  .menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-menu {
-    position: absolute;
-    left: 4%;
-    right: 4%;
-    top: calc(100% + 1px);
-
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-
-    padding: 12px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 0 0 13px 13px;
-    box-shadow: var(--shadow);
-
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-  }
-
-  /*
-       If JS adds .show to nav-menu,
-       menu will open.
-    */
-
-  .nav-menu.show {
-    display: flex;
-  }
-
-  .nav-link,
-  .dropdown-toggle {
-    width: 100%;
-    min-height: 44px;
-    padding: 11px 12px;
-    justify-content: space-between;
-    font-size: 12px;
-  }
-
-  .nav-link::after {
-    display: none;
-  }
-
-  .nav-btn {
-    width: 100%;
-    margin: 8px 0 2px;
-    min-height: 45px;
-  }
-
-  /* DROPDOWN */
-
-  .nav-dropdown {
-    width: 100%;
-  }
-
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    display: none;
-
-    margin: 2px 0 5px;
-    padding: 7px;
-
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-
-    border-radius: 8px;
-    box-shadow: none;
-    background: var(--light);
-  }
-
-  .nav-dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-  }
-
-  .nav-dropdown.open .dropdown-menu {
-    display: block;
-  }
-
-  .dropdown-menu::before {
-    display: none;
-  }
-
-  .dropdown-menu a {
-    padding: 10px;
-    font-size: 11px;
-  }
-
-  /* HERO */
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 10px;
-    padding: 55px 0 65px;
-  }
-
-  .hero-content {
-    padding: 0;
-    order: 1;
-  }
-
-  .eyebrow {
-    justify-content: center;
-  }
-
-  .hero h1 {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: clamp(38px, 8vw, 54px);
-  }
-
-  .hero-content > p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-trust {
-    justify-content: center;
-  }
-
-  .hero-visual {
-    order: 2;
-    min-height: 450px;
-    margin-top: 10px;
-  }
-
-  .ring-one {
+  .about-page-visual::before {
     width: 390px;
     height: 390px;
   }
 
-  .ring-two {
-    width: 305px;
-    height: 305px;
-  }
-
-  .certificate-visual {
-    width: 310px;
-  }
-
-  .box-one {
-    left: 2%;
-  }
-
-  .box-two {
-    right: 2%;
-  }
-
-  /* STATS */
-
-  .stat-card {
-    min-height: 95px;
-    padding: 16px;
-  }
-
-  /* SECTION HEADING */
-
-  .section-heading {
-    display: block;
-    text-align: center;
-    margin-bottom: 35px;
-  }
-
-  .section-heading > div {
-    margin: auto;
-  }
-
-  .section-heading > p {
-    margin: 15px auto 0;
-    max-width: 600px;
-  }
-
-  /* ABOUT */
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .about-content {
-    text-align: center;
-  }
-
-  .about-content > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .check-list {
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
-
-  .about-visual {
-    min-height: 410px;
-  }
-
-  /* CERTIFICATIONS */
-
-  .cert-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .mission-grid {
     gap: 15px;
   }
 
-  /* WHY */
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .mission-card {
+    padding: 27px;
   }
 
-  /* COMPLIANCE */
-
-  .compliance-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about-why-grid {
+    gap: 55px;
   }
 
-  /* INDUSTRIES */
-
-  .industry-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about-cert-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
   }
 
-  /* PROCESS */
-
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about-cert-card {
+    padding: 23px;
   }
 
-  /* RECOGNITION */
-
-  .recognition-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .about-process-grid {
+    gap: 14px;
   }
 
-  .recognition-grid > div:first-child {
-    text-align: center;
+  .about-process-line {
+    width: 55px;
   }
 
-  .recognition-grid > div:first-child > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .recognition-list {
-    max-width: 550px;
-    margin: auto;
-    text-align: left;
-  }
-
-  .recognition-box {
-    max-width: 550px;
-    width: 100%;
-    margin: auto;
-  }
-
-  /* CONSULTATION */
-
-  .consultation-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .consultation-content {
-    text-align: center;
-  }
-
-  .consultation-content > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .contact-info {
-    max-width: 400px;
-    margin: auto;
-    text-align: left;
-  }
-
-  .form-card {
-    max-width: 600px;
-    width: 100%;
-    margin: auto;
-  }
-
-  /* CTA */
-
-  .cta-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cta p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .cta-buttons {
-    justify-content: center;
-  }
-
-  /* FOOTER */
-
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-company {
-    grid-column: span 2;
-    text-align: center;
-  }
-
-  .footer-company > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .footer-brand {
-    justify-content: center;
-  }
-
-  .footer-social {
-    justify-content: center;
-  }
-
-  .footer-bottom-inner {
-    flex-direction: column;
-    justify-content: center;
-    padding: 15px 0;
-    text-align: center;
-    gap: 8px;
-  }
-
-  .footer-bottom a {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-
-  /* FLOATING BUTTONS */
-
-  .whatsapp {
-    right: 15px;
-    bottom: 15px;
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
-  }
-
-  .back-top {
-    right: 18px;
-    bottom: 72px;
-    width: 37px;
-    height: 37px;
+  .about-page-cta-inner {
+    gap: 30px;
   }
 }
 
 /* =========================================================
-   LARGE MOBILE
-   576px
+   1100px
 ========================================================= */
 
-@media (max-width: 576px) {
-  .container {
-    width: 92%;
+@media (max-width: 1100px) {
+  .about-page-intro,
+  .mission-section,
+  .about-why,
+  .about-certification,
+  .about-process {
+    padding: 85px 0;
   }
 
-  /* TOPBAR */
-
-  .topbar-right {
-    width: 100%;
-    justify-content: center;
+  .about-page-grid {
+    gap: 45px;
   }
 
-  .topbar-right a:nth-child(2) {
-    display: none;
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: clamp(32px, 4vw, 45px);
   }
 
-  .social-links {
-    display: none;
-  }
-
-  /* HEADER */
-
-  .navbar {
-    min-height: 68px;
-  }
-
-  .brand img {
-    width: 82px;
-    height: 52px;
-  }
-
-  .menu-toggle {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-
-  /* HERO */
-
-  .hero-grid {
-    padding: 45px 0 55px;
-  }
-
-  .hero h1 {
-    font-size: clamp(34px, 10vw, 45px);
-    letter-spacing: -1.8px;
-  }
-
-  .hero-content > p {
+  .about-page-content > p,
+  .about-why-content > p {
     font-size: 12px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
+  .about-page-visual {
+    min-height: 430px;
   }
 
-  .btn {
-    width: 100%;
-    min-height: 46px;
+  .about-main-card {
+    width: 330px;
+    min-height: 370px;
+    padding: 32px;
   }
 
-  .hero-trust {
-    flex-direction: column;
-    align-items: center;
+  .about-page-visual::before {
+    width: 360px;
+    height: 360px;
+  }
+
+  .about-floating-card {
+    right: -5px;
+    bottom: 40px;
+  }
+
+  .mission-card {
+    min-height: 300px;
+    padding: 25px;
+  }
+
+  .about-why-grid {
+    gap: 45px;
+  }
+
+  .benefit-item {
+    padding: 19px;
+  }
+
+  .about-cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .about-cert-card p {
+    min-height: auto;
+  }
+
+  .about-process-grid {
+    grid-template-columns: 1fr auto 1fr auto 1fr;
     gap: 10px;
   }
 
-  .hero-visual {
-    min-height: 370px;
+  .about-process-line {
+    width: 45px;
   }
 
-  .ring-one {
-    width: 300px;
-    height: 300px;
+  .about-page-cta {
+    padding: 65px 0;
+  }
+}
+
+/* =========================================================
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+  .about-page-hero {
+    min-height: 390px;
   }
 
-  .ring-two {
-    width: 240px;
-    height: 240px;
+  .about-page-hero-content {
+    padding: 65px 0;
+    max-width: 700px;
   }
 
-  .certificate-visual {
-    width: 265px;
-    min-height: 340px;
-    padding: 13px;
+  .about-page-hero h1 {
+    font-size: clamp(38px, 5.5vw, 55px);
+    letter-spacing: -2.5px;
   }
 
-  .certificate-body {
-    min-height: 245px;
-    margin-top: 12px;
-    padding: 23px 12px;
-  }
-
-  .certificate-body h2 {
-    font-size: 45px;
-  }
-
-  .certificate-body strong {
-    font-size: 17px;
-  }
-
-  .certificate-divider {
-    margin: 20px auto 15px;
-  }
-
-  .floating-box {
-    padding: 9px;
-    gap: 7px;
-  }
-
-  .floating-box > i {
-    width: 31px;
-    height: 31px;
-    font-size: 11px;
-  }
-
-  .floating-box strong {
-    font-size: 9px;
-  }
-
-  .floating-box span {
-    font-size: 7px;
-  }
-
-  .box-one {
-    left: 0;
-    top: 45px;
-  }
-
-  .box-two {
-    right: 0;
-    bottom: 35px;
-  }
-
-  /* TRUST */
-
-  .trust-inner {
-    padding: 18px 0;
-  }
-
-  .standard-tags {
-    gap: 5px;
-  }
-
-  .standard-tags span {
-    font-size: 8px;
-    padding: 5px 7px;
-  }
-
-  /* STATS */
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stat-card {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .stat-card:last-child {
-    border-bottom: 0;
-  }
-
-  /* SECTIONS */
-
-  .about-intro,
-  .certifications,
-  .why-us,
-  .compliance,
-  .industries,
-  .process,
-  .recognition,
-  .consultation {
-    padding: 60px 0;
-  }
-
-  .section-heading {
-    margin-bottom: 30px;
-  }
-
-  .section-heading h2,
-  .about-content h2,
-  .recognition h2,
-  .consultation-content h2 {
-    font-size: clamp(27px, 8vw, 36px);
-    letter-spacing: -1px;
-  }
-
-  .section-heading > p {
-    font-size: 11px;
-  }
-
-  /* ABOUT */
-
-  .about-grid {
-    gap: 35px;
-  }
-
-  .about-content > p {
+  .about-page-hero-content > p {
+    max-width: 600px;
     font-size: 12px;
   }
 
-  .check-list {
+  .about-page-grid {
     grid-template-columns: 1fr;
-    text-align: left;
+    gap: 60px;
   }
 
-  .check-list div {
-    font-size: 11px;
+  .about-page-content {
+    max-width: 750px;
   }
 
-  .about-visual {
-    min-height: 350px;
+  .about-page-visual {
+    min-height: 470px;
   }
 
-  .about-card {
-    width: 270px;
-    min-height: 300px;
-    padding: 27px;
+  .about-main-card {
+    width: 370px;
+    min-height: 390px;
   }
 
-  .about-card-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
+  .about-page-visual::before {
+    width: 410px;
+    height: 410px;
   }
 
-  .about-card h3 {
-    font-size: 23px;
+  .about-floating-card {
+    right: calc(50% - 235px);
+    bottom: 45px;
   }
 
-  .about-card p {
-    font-size: 10px;
+  .mission-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .about-small-card {
-    right: 0;
-    bottom: 5px;
-    padding: 10px;
+  .mission-card {
+    min-height: 290px;
   }
 
-  .about-small-card > i {
-    width: 34px;
-    height: 34px;
+  .mission-card.featured {
+    grid-column: span 2;
   }
 
-  .about-small-card strong {
-    font-size: 9px;
-  }
-
-  .about-small-card span {
-    font-size: 7px;
-  }
-
-  /* CARDS */
-
-  .cert-grid,
-  .why-grid,
-  .compliance-grid,
-  .industry-grid {
+  .about-why-grid {
     grid-template-columns: 1fr;
+    gap: 50px;
   }
 
-  .cert-card,
-  .why-card,
-  .compliance-card,
-  .industry-card {
-    width: 100%;
+  .about-why-content {
+    max-width: 750px;
   }
 
-  .why-card {
-    min-height: auto;
+  .about-benefits {
+    gap: 12px;
   }
 
-  .compliance-card {
-    min-height: auto;
+  .about-cert-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .compliance-card p {
-    min-height: auto;
-    margin-bottom: 18px;
-  }
-
-  /* PROCESS */
-
-  .process-grid {
+  .about-process-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  .process-step {
-    max-width: 300px;
+  .about-process-step {
+    max-width: 600px;
     margin: auto;
   }
 
-  /* RECOGNITION */
+  .about-process-line {
+    width: 1px;
+    height: 45px;
+    margin: 0 auto;
+  }
 
-  .recognition-list {
+  .about-page-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-page-cta p {
+    max-width: 650px;
+  }
+}
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .about-page-hero {
+    min-height: 350px;
+  }
+
+  .about-page-hero-content {
+    padding: 55px 0;
+  }
+
+  .about-page-hero h1 {
+    margin: 15px 0;
+    font-size: clamp(34px, 7vw, 48px);
+    letter-spacing: -2px;
+  }
+
+  .about-page-hero-content > p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .about-breadcrumb {
+    margin-top: 22px;
+    font-size: 10px;
+  }
+
+  .about-page-intro,
+  .mission-section,
+  .about-why,
+  .about-certification,
+  .about-process {
+    padding: 70px 0;
+  }
+
+  .about-page-grid {
+    gap: 45px;
+  }
+
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: clamp(30px, 6vw, 42px);
+    letter-spacing: -1.5px;
+  }
+
+  .about-page-content > p,
+  .about-why-content > p {
+    font-size: 11px;
+  }
+
+  .about-page-checks {
+    gap: 10px;
+  }
+
+  .about-page-checks div {
+    font-size: 10px;
+  }
+
+  .about-page-visual {
+    min-height: 430px;
+  }
+
+  .about-page-visual::before {
+    width: 350px;
+    height: 350px;
+  }
+
+  .about-main-card {
+    width: 330px;
+    min-height: 360px;
+    padding: 30px;
+  }
+
+  .about-main-card h3 {
+    font-size: 27px;
+  }
+
+  .about-floating-card {
+    right: 20px;
+    bottom: 30px;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .mission-card.featured {
+    grid-column: auto;
+  }
+
+  .about-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-item {
+    padding: 18px;
+  }
+
+  .about-cert-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .about-cert-card {
+    padding: 21px;
+  }
+
+  .about-cert-card h3 {
+    font-size: 16px;
+  }
+
+  .about-cert-card p {
+    font-size: 9px;
+  }
+
+  .about-page-cta {
+    padding: 60px 0;
+  }
+
+  .about-page-cta h2 {
+    font-size: clamp(30px, 6vw, 42px);
+  }
+
+  .about-page-cta p {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .about-page-hero {
+    min-height: 320px;
+  }
+
+  .about-page-hero-content {
+    padding: 50px 0;
+  }
+
+  .about-page-hero h1 {
+    font-size: clamp(30px, 8vw, 42px);
+    letter-spacing: -1.5px;
+  }
+
+  .about-page-hero-content > p {
+    font-size: 10px;
+  }
+
+  .about-page-pattern {
+    background-size: 32px 32px;
+  }
+
+  .about-page-hero::after {
+    width: 350px;
+    height: 350px;
+    right: -180px;
+    top: -180px;
+    border-width: 45px;
+  }
+
+  .about-page-intro,
+  .mission-section,
+  .about-why,
+  .about-certification,
+  .about-process {
+    padding: 60px 0;
+  }
+
+  .about-page-grid {
+    gap: 35px;
+  }
+
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: 30px;
+  }
+
+  .about-page-checks {
     grid-template-columns: 1fr;
     gap: 9px;
   }
 
-  .recognition-items {
-    grid-template-columns: 1fr 1fr;
+  .about-page-visual {
+    min-height: 400px;
   }
 
-  /* FORM */
-
-  .form-card {
-    padding: 22px 17px;
+  .about-page-visual::before {
+    width: 310px;
+    height: 310px;
   }
 
-  .form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
+  .about-main-card {
+    width: 300px;
+    min-height: 340px;
+    padding: 27px;
+    border-radius: 16px;
   }
 
-  .form-heading h3 {
-    font-size: 22px;
+  .about-main-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
   }
 
-  /* CTA */
-
-  .cta {
-    padding: 52px 0;
+  .about-main-card h3 {
+    font-size: 24px;
   }
 
-  .cta h2 {
-    font-size: 31px;
+  .about-main-card > p {
+    font-size: 10px;
   }
 
-  .cta-buttons {
-    width: 100%;
-    flex-direction: column;
-    max-width: 300px;
+  .about-card-bottom {
+    gap: 25px;
   }
 
-  .cta-buttons .btn {
-    width: 100%;
+  .about-floating-card {
+    right: 5px;
+    bottom: 20px;
+    padding: 11px;
   }
 
-  /* FOOTER */
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 55px 0 35px;
+  .about-floating-icon {
+    width: 37px;
+    height: 37px;
   }
 
-  .footer-company {
-    grid-column: auto;
+  .about-floating-card strong {
+    font-size: 10px;
   }
 
-  .footer-column {
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-brand img {
-    width: 155px;
-  }
-
-  .footer-bottom p,
-  .footer-bottom a {
+  .about-floating-card span {
     font-size: 8px;
+  }
+
+  .mission-card {
+    padding: 22px;
+  }
+
+  .mission-icon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .mission-card h3 {
+    font-size: 17px;
+  }
+
+  .mission-card p {
+    font-size: 10px;
+  }
+
+  .about-benefits {
+    gap: 10px;
+  }
+
+  .benefit-item {
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .benefit-item h3 {
+    font-size: 13px;
+  }
+
+  .benefit-item p {
+    font-size: 9px;
+  }
+
+  .about-cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cert-card {
+    padding: 20px;
+  }
+
+  .about-cert-card p {
+    min-height: auto;
+  }
+
+  .about-page-cta-buttons {
+    width: 100%;
+  }
+
+  .about-page-cta-buttons .btn {
+    width: 100%;
   }
 }
 
 /* =========================================================
-   MOBILE
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  .about-page-hero {
+    min-height: 300px;
+  }
+
+  .about-page-hero-content {
+    padding: 42px 0;
+  }
+
+  .about-page-hero h1 {
+    font-size: 29px;
+    line-height: 1.15;
+  }
+
+  .about-page-hero-content > p {
+    font-size: 9px;
+    line-height: 1.75;
+  }
+
+  .about-breadcrumb {
+    gap: 7px;
+    font-size: 9px;
+  }
+
+  .about-page-intro,
+  .mission-section,
+  .about-why,
+  .about-certification,
+  .about-process {
+    padding: 50px 0;
+  }
+
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .about-page-content > p,
+  .about-why-content > p {
+    font-size: 10px;
+  }
+
+  .about-page-visual {
+    min-height: 355px;
+  }
+
+  .about-page-visual::before {
+    width: 270px;
+    height: 270px;
+  }
+
+  .about-main-card {
+    width: 270px;
+    min-height: 310px;
+    padding: 23px;
+    border-radius: 14px;
+  }
+
+  .about-main-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 18px;
+    font-size: 19px;
+  }
+
+  .about-main-card h3 {
+    font-size: 21px;
+    margin: 10px 0;
+  }
+
+  .about-main-card > p {
+    font-size: 9px;
+  }
+
+  .about-card-line {
+    margin: 18px 0 15px;
+  }
+
+  .about-card-bottom {
+    gap: 18px;
+  }
+
+  .about-card-bottom strong {
+    font-size: 9px;
+  }
+
+  .about-card-bottom span {
+    font-size: 7px;
+  }
+
+  .about-floating-card {
+    right: 0;
+    bottom: 10px;
+    padding: 9px;
+    gap: 7px;
+  }
+
+  .about-floating-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .about-floating-card strong {
+    font-size: 8px;
+  }
+
+  .about-floating-card span {
+    font-size: 7px;
+  }
+
+  .mission-card {
+    padding: 19px;
+  }
+
+  .mission-card h3 {
+    font-size: 16px;
+  }
+
+  .mission-card p {
+    font-size: 9px;
+  }
+
+  .mission-card > span {
+    font-size: 32px;
+  }
+
+  .about-cert-card {
+    padding: 18px;
+  }
+
+  .about-cert-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .about-cert-card h3 {
+    font-size: 15px;
+  }
+
+  .about-cert-card p {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+  .about-process-grid {
+    gap: 22px;
+  }
+
+  .process-step-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-process-step h3 {
+    font-size: 14px;
+  }
+
+  .about-process-step p {
+    font-size: 9px;
+  }
+
+  .about-page-cta {
+    padding: 50px 0;
+  }
+
+  .about-page-cta h2 {
+    font-size: 27px;
+  }
+
+  .about-page-cta p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
    400px
 ========================================================= */
 
 @media (max-width: 400px) {
   .container {
-    width: 91%;
+    width: 92%;
   }
 
-  /* HEADER */
-
-  .brand img {
-    width: 75px;
-    height: 48px;
-  }
-
-  /* HERO */
-
-  .hero-grid {
-    padding: 38px 0 45px;
-  }
-
-  .eyebrow,
-  .section-label {
-    font-size: 9px;
-    letter-spacing: 1.2px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-    letter-spacing: -1.4px;
-  }
-
-  .hero-content > p {
-    font-size: 11px;
-    line-height: 1.7;
-  }
-
-  .hero-visual {
-    min-height: 325px;
-  }
-
-  .ring-one {
-    width: 265px;
-    height: 265px;
-  }
-
-  .ring-two {
-    width: 210px;
-    height: 210px;
-  }
-
-  .certificate-visual {
-    width: 230px;
-    min-height: 300px;
-  }
-
-  .certificate-body {
-    min-height: 215px;
-    padding: 20px 8px;
-  }
-
-  .certificate-body h2 {
-    font-size: 38px;
-  }
-
-  .certificate-body strong {
-    font-size: 14px;
-  }
-
-  .certificate-body p {
-    font-size: 11px;
-  }
-
-  .certificate-body span {
-    font-size: 8px;
-  }
-
-  .certificate-footer {
-    font-size: 7px;
-  }
-
-  .floating-box {
-    padding: 7px;
-  }
-
-  .floating-box > i {
-    width: 27px;
-    height: 27px;
-    font-size: 9px;
-  }
-
-  .floating-box strong {
-    font-size: 8px;
-  }
-
-  .floating-box span {
-    font-size: 6px;
-  }
-
-  .box-one {
-    left: -5px;
-    top: 35px;
-  }
-
-  .box-two {
-    right: -5px;
-    bottom: 25px;
-  }
-
-  /* STATS */
-
-  .stat-card {
-    min-height: 85px;
-  }
-
-  .stat-icon {
-    width: 38px;
-    height: 38px;
-  }
-
-  .stat-card strong {
-    font-size: 17px;
-  }
-
-  .stat-card span {
-    font-size: 8px;
-  }
-
-  /* SECTIONS */
-
-  .about-intro,
-  .certifications,
-  .why-us,
-  .compliance,
-  .industries,
-  .process,
-  .recognition,
-  .consultation {
-    padding: 50px 0;
-  }
-
-  .section-heading h2,
-  .about-content h2,
-  .recognition h2,
-  .consultation-content h2 {
+  .about-page-hero h1 {
     font-size: 27px;
   }
 
-  /* ABOUT */
-
-  .about-card {
-    width: 235px;
-    min-height: 280px;
-    padding: 23px;
+  .about-page-hero-content > p {
+    font-size: 8.5px;
   }
 
-  .about-card h3 {
-    font-size: 20px;
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: 25px;
   }
 
-  .about-small-card {
-    right: -3px;
-    bottom: 0;
+  .about-page-visual {
+    min-height: 330px;
   }
 
-  /* RECOGNITION */
-
-  .recognition-items {
-    gap: 7px;
+  .about-page-visual::before {
+    width: 245px;
+    height: 245px;
   }
 
-  .recognition-items div {
-    min-height: 75px;
+  .about-main-card {
+    width: 250px;
+    min-height: 290px;
+    padding: 20px;
   }
 
-  .recognition-items strong {
-    font-size: 18px;
+  .about-main-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 15px;
   }
 
-  /* FORM */
-
-  .form-card {
-    padding: 18px 13px;
+  .about-main-card h3 {
+    font-size: 19px;
   }
 
-  .form-group input,
-  .form-group select {
-    height: 41px;
+  .about-main-card > p {
+    font-size: 8px;
   }
 
-  /* CTA */
-
-  .cta h2 {
-    font-size: 27px;
+  .about-card-bottom {
+    gap: 13px;
   }
 
-  .cta p {
-    font-size: 10px;
+  .about-floating-card {
+    right: -2px;
+    bottom: 4px;
   }
 
-  /* WHATSAPP */
-
-  .whatsapp {
-    width: 44px;
-    height: 44px;
-    right: 12px;
-    bottom: 12px;
-    font-size: 20px;
+  .mission-card {
+    padding: 17px;
   }
 
-  .back-top {
-    width: 34px;
-    height: 34px;
-    right: 17px;
-    bottom: 64px;
+  .benefit-item {
+    padding: 13px;
+  }
+
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .about-page-cta h2 {
+    font-size: 25px;
   }
 }
 
 /* =========================================================
-   SMALL MOBILE
    320px
 ========================================================= */
 
 @media (max-width: 320px) {
   .container {
-    width: 90%;
+    width: 94%;
   }
 
-  /* HEADER */
-
-  .navbar {
-    min-height: 62px;
+  .about-page-hero {
+    min-height: 285px;
   }
 
-  .brand img {
-    width: 68px;
-    height: 43px;
+  .about-page-hero-content {
+    padding: 35px 0;
   }
 
-  .menu-toggle {
-    width: 37px;
-    height: 37px;
+  .about-page-hero h1 {
+    font-size: 24px;
+    letter-spacing: -1px;
   }
 
-  /* HERO */
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero-content > p {
-    font-size: 10px;
-  }
-
-  .hero-buttons {
-    max-width: 100%;
-  }
-
-  .btn {
-    min-height: 43px;
-    font-size: 11px;
-  }
-
-  .hero-visual {
-    min-height: 280px;
-  }
-
-  .ring-one {
-    width: 225px;
-    height: 225px;
-  }
-
-  .ring-two {
-    width: 175px;
-    height: 175px;
-  }
-
-  .certificate-visual {
-    width: 195px;
-    min-height: 255px;
-    padding: 9px;
-  }
-
-  .certificate-header {
-    padding-bottom: 9px;
-  }
-
-  .certificate-mark {
-    width: 30px;
-    height: 30px;
-  }
-
-  .certificate-body {
-    min-height: 180px;
-    margin-top: 8px;
-    padding: 15px 5px;
-  }
-
-  .certificate-body small {
-    font-size: 6px;
-  }
-
-  .certificate-body h2 {
-    margin-top: 16px;
-    font-size: 31px;
-    letter-spacing: -2px;
-  }
-
-  .certificate-body strong {
-    font-size: 12px;
-  }
-
-  .certificate-divider {
-    width: 40px;
-    margin: 14px auto 10px;
-  }
-
-  .certificate-body p {
-    font-size: 9px;
-  }
-
-  .certificate-body span {
-    font-size: 6px;
-  }
-
-  .certificate-footer {
-    padding-top: 8px;
-    font-size: 6px;
-  }
-
-  .floating-box {
-    padding: 5px;
-    gap: 5px;
-  }
-
-  .floating-box > i {
-    width: 23px;
-    height: 23px;
+  .about-page-hero-content > p {
     font-size: 8px;
   }
 
-  .floating-box strong {
-    font-size: 7px;
+  .about-breadcrumb {
+    font-size: 8px;
   }
 
-  .floating-box span {
-    font-size: 5px;
-  }
-
-  .box-one {
-    left: -4px;
-    top: 25px;
-  }
-
-  .box-two {
-    right: -4px;
-    bottom: 15px;
-  }
-
-  /* TRUST */
-
-  .trust-inner > span {
-    font-size: 9px;
-  }
-
-  .standard-tags span {
-    font-size: 7px;
-    padding: 4px 5px;
-  }
-
-  /* SECTION */
-
-  .about-intro,
-  .certifications,
-  .why-us,
-  .compliance,
-  .industries,
-  .process,
-  .recognition,
-  .consultation {
+  .about-page-intro,
+  .mission-section,
+  .about-why,
+  .about-certification,
+  .about-process {
     padding: 42px 0;
   }
 
-  .section-heading {
-    margin-bottom: 25px;
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: 23px;
   }
 
-  .section-heading h2,
-  .about-content h2,
-  .recognition h2,
-  .consultation-content h2 {
-    font-size: 24px;
+  .about-page-content > p,
+  .about-why-content > p {
+    font-size: 9px;
   }
 
-  .section-heading > p {
-    font-size: 10px;
+  .about-page-visual {
+    min-height: 295px;
   }
 
-  /* ABOUT */
-
-  .about-card {
-    width: 205px;
-    min-height: 250px;
-    padding: 20px;
+  .about-page-visual::before {
+    width: 215px;
+    height: 215px;
   }
 
-  .about-card-icon {
-    width: 42px;
-    height: 42px;
-    margin-bottom: 16px;
+  .about-main-card {
+    width: 220px;
+    min-height: 260px;
+    padding: 17px;
+    border-radius: 12px;
+  }
+
+  .about-main-icon {
+    width: 37px;
+    height: 37px;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .about-main-card > span {
+    font-size: 7px;
+  }
+
+  .about-main-card h3 {
     font-size: 17px;
   }
 
-  .about-card h3 {
-    font-size: 18px;
+  .about-main-card > p {
+    font-size: 7px;
+    line-height: 1.7;
   }
 
-  .about-card p {
-    font-size: 8px;
+  .about-card-line {
+    width: 40px;
+    margin: 14px 0 12px;
   }
 
-  .about-small-card {
-    padding: 7px;
+  .about-card-bottom {
+    gap: 10px;
   }
 
-  .about-small-card > i {
-    width: 29px;
-    height: 29px;
-  }
-
-  .about-small-card strong {
+  .about-card-bottom strong {
     font-size: 7px;
   }
 
-  .about-small-card span {
+  .about-card-bottom span {
     font-size: 6px;
   }
 
-  /* CARDS */
-
-  .cert-card,
-  .why-card,
-  .compliance-card,
-  .industry-card {
-    padding: 20px;
+  .about-floating-card {
+    padding: 7px;
+    gap: 5px;
   }
 
-  .cert-card h3,
-  .why-card h3,
-  .compliance-card h3 {
-    font-size: 15px;
+  .about-floating-icon {
+    width: 27px;
+    height: 27px;
   }
 
-  .cert-card p,
-  .why-card p,
-  .compliance-card p {
-    font-size: 9px;
-  }
-
-  /* PROCESS */
-
-  .process-icon {
-    width: 58px;
-    height: 58px;
-    font-size: 16px;
-  }
-
-  .process-step h3 {
-    font-size: 14px;
-  }
-
-  .process-step p {
-    font-size: 9px;
-  }
-
-  /* RECOGNITION */
-
-  .recognition-box {
-    padding: 20px;
-  }
-
-  .recognition-items strong {
-    font-size: 16px;
-  }
-
-  .recognition-items small {
+  .about-floating-card strong {
     font-size: 7px;
   }
 
-  /* FORM */
-
-  .form-heading h3 {
-    font-size: 19px;
+  .about-floating-card span {
+    font-size: 6px;
   }
 
-  .form-heading p {
-    font-size: 9px;
+  .mission-card {
+    padding: 15px;
   }
 
-  .form-group label {
-    font-size: 9px;
+  .mission-icon {
+    width: 42px;
+    height: 42px;
   }
 
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 9px;
-    padding: 9px;
+  .mission-card h3 {
+    font-size: 14px;
   }
 
-  .form-submit {
-    min-height: 43px;
+  .mission-card p {
+    font-size: 8px;
+  }
+
+  .about-benefits {
+    gap: 8px;
+  }
+
+  .benefit-item {
+    gap: 8px;
+    padding: 11px;
+  }
+
+  .benefit-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .benefit-item h3 {
+    font-size: 11px;
+  }
+
+  .benefit-item p {
+    font-size: 8px;
+  }
+
+  .about-cert-card {
+    padding: 15px;
+  }
+
+  .about-cert-card h3 {
+    font-size: 14px;
+  }
+
+  .about-cert-card p {
+    font-size: 8px;
+  }
+
+  .process-step-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 16px;
+  }
+
+  .about-process-step h3 {
+    font-size: 13px;
+  }
+
+  .about-process-step p {
+    font-size: 8px;
+  }
+
+  .about-page-cta {
+    padding: 42px 0;
+  }
+
+  .about-page-cta h2 {
+    font-size: 22px;
+  }
+
+  .about-page-cta p {
+    font-size: 8px;
+  }
+
+  .about-page-cta-buttons .btn {
+    min-height: 42px;
     font-size: 10px;
-  }
-
-  /* FOOTER */
-
-  .footer-grid {
-    padding: 45px 0 30px;
-    gap: 25px;
-  }
-
-  .footer-column h3 {
-    font-size: 12px;
-  }
-
-  .footer-column > a,
-  .footer-contact p {
-    font-size: 9px;
-  }
-
-  /* CTA */
-
-  .cta {
-    padding: 45px 0;
-  }
-
-  .cta h2 {
-    font-size: 24px;
-  }
-
-  .cta p {
-    font-size: 9px;
-  }
-
-  /* FLOATING */
-
-  .whatsapp {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    right: 9px;
-    bottom: 9px;
-  }
-
-  .back-top {
-    width: 31px;
-    height: 31px;
-    right: 14px;
-    bottom: 57px;
   }
 }
 
 /* =========================================================
-   EXTRA SMALL
    260px
 ========================================================= */
 
 @media (max-width: 260px) {
   .container {
-    width: 88%;
+    width: 94%;
   }
 
-  .navbar {
-    gap: 8px;
+  .about-page-hero h1 {
+    font-size: 21px;
   }
 
-  .brand img {
-    width: 60px;
-    height: 38px;
+  .about-page-hero-content > p {
+    font-size: 7px;
   }
 
-  .menu-toggle {
-    width: 34px;
-    height: 34px;
-    font-size: 14px;
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: 20px;
   }
 
-  /* HERO */
-
-  .hero h1 {
-    font-size: 24px;
-    letter-spacing: -1px;
+  .about-page-visual {
+    min-height: 265px;
   }
 
-  .hero-content > p {
-    font-size: 9px;
-  }
-
-  .eyebrow {
-    font-size: 8px;
-  }
-
-  .hero-visual {
-    min-height: 235px;
-  }
-
-  .ring-one {
+  .about-page-visual::before {
     width: 185px;
     height: 185px;
   }
 
-  .ring-two {
-    width: 145px;
-    height: 145px;
+  .about-main-card {
+    width: 190px;
+    min-height: 230px;
+    padding: 14px;
   }
 
-  .certificate-visual {
-    width: 165px;
-    min-height: 215px;
-    padding: 7px;
-  }
-
-  .certificate-body {
-    min-height: 150px;
-    padding: 12px 4px;
-  }
-
-  .certificate-body h2 {
-    font-size: 25px;
-    margin-top: 12px;
-  }
-
-  .certificate-body strong {
-    font-size: 9px;
-  }
-
-  .certificate-body p {
-    font-size: 7px;
-  }
-
-  .certificate-divider {
-    width: 30px;
-    margin: 10px auto;
-  }
-
-  .certificate-footer {
-    font-size: 5px;
-  }
-
-  .floating-box {
-    display: none;
-  }
-
-  /* SECTIONS */
-
-  .about-intro,
-  .certifications,
-  .why-us,
-  .compliance,
-  .industries,
-  .process,
-  .recognition,
-  .consultation {
-    padding: 35px 0;
-  }
-
-  .section-heading h2,
-  .about-content h2,
-  .recognition h2,
-  .consultation-content h2 {
-    font-size: 21px;
-  }
-
-  .section-heading > p {
-    font-size: 9px;
-  }
-
-  /* ABOUT */
-
-  .about-card {
-    width: 175px;
-    min-height: 215px;
-    padding: 16px;
-  }
-
-  .about-card-icon {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 12px;
-    font-size: 14px;
-  }
-
-  .about-card h3 {
-    font-size: 15px;
-  }
-
-  .about-card p {
-    font-size: 7px;
-  }
-
-  .about-small-card {
-    right: -8px;
-    padding: 5px;
-  }
-
-  .about-small-card > i {
-    width: 25px;
-    height: 25px;
-  }
-
-  .about-small-card strong {
-    font-size: 6px;
-  }
-
-  .about-small-card span {
-    font-size: 5px;
-  }
-
-  /* BUTTONS */
-
-  .btn {
-    min-height: 40px;
-    padding: 0 10px;
-    font-size: 9px;
-  }
-
-  /* STATS */
-
-  .stat-card {
-    padding: 12px;
-    gap: 8px;
-  }
-
-  .stat-icon {
+  .about-main-icon {
     width: 32px;
     height: 32px;
-  }
-
-  .stat-card strong {
-    font-size: 14px;
-  }
-
-  .stat-card span {
-    font-size: 7px;
-  }
-
-  /* CARDS */
-
-  .cert-card,
-  .why-card,
-  .compliance-card,
-  .industry-card {
-    padding: 15px;
-  }
-
-  .cert-card h3,
-  .why-card h3,
-  .compliance-card h3,
-  .industry-card h3 {
-    font-size: 13px;
-  }
-
-  .cert-card p,
-  .why-card p,
-  .compliance-card p,
-  .industry-card p {
-    font-size: 8px;
-  }
-
-  /* FORM */
-
-  .form-card {
-    padding: 14px 10px;
-  }
-
-  .form-heading h3 {
-    font-size: 17px;
-  }
-
-  .form-group {
     margin-bottom: 9px;
   }
 
-  .form-group input,
-  .form-group select {
-    height: 37px;
+  .about-main-card h3 {
+    font-size: 15px;
   }
 
-  .form-submit {
-    min-height: 39px;
-    font-size: 9px;
+  .about-main-card > p {
+    font-size: 6.5px;
   }
 
-  /* CTA */
-
-  .cta h2 {
-    font-size: 21px;
+  .about-card-bottom {
+    gap: 7px;
   }
 
-  .cta-buttons {
-    max-width: 100%;
+  .about-floating-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: -20px auto 0;
+    width: fit-content;
   }
 
-  /* FOOTER */
-
-  .footer-grid {
-    padding: 35px 0 25px;
+  .mission-card h3 {
+    font-size: 13px;
   }
 
-  .footer-brand img {
-    width: 125px;
-  }
-
-  .footer-column h3 {
-    font-size: 10px;
-  }
-
-  .footer-column > a,
-  .footer-contact p {
+  .mission-card p {
     font-size: 7px;
   }
 
-  .footer-bottom p,
-  .footer-bottom a {
+  .benefit-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-cert-card h3 {
+    font-size: 13px;
+  }
+
+  .about-cert-card p {
     font-size: 7px;
+  }
+
+  .about-page-cta h2 {
+    font-size: 20px;
   }
 }
 
 /* =========================================================
-   ULTRA SMALL
+   220px
+========================================================= */
+
+@media (max-width: 220px) {
+  .container {
+    width: 95%;
+  }
+
+  .about-page-hero h1 {
+    font-size: 19px;
+  }
+
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: 18px;
+  }
+
+  .about-page-visual {
+    min-height: 235px;
+  }
+
+  .about-page-visual::before {
+    width: 160px;
+    height: 160px;
+  }
+
+  .about-main-card {
+    width: 165px;
+    min-height: 205px;
+    padding: 11px;
+  }
+
+  .about-main-card h3 {
+    font-size: 13px;
+  }
+
+  .about-main-card > p {
+    font-size: 6px;
+  }
+
+  .about-floating-card {
+    max-width: 150px;
+  }
+
+  .mission-card {
+    padding: 12px;
+  }
+
+  .about-page-cta h2 {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
    200px
 ========================================================= */
 
 @media (max-width: 200px) {
   .container {
-    width: 86%;
+    width: 96%;
   }
 
-  /* HEADER */
-
-  .navbar {
-    min-height: 55px;
+  .about-page-hero {
+    min-height: 250px;
   }
 
-  .brand img {
-    width: 52px;
-    height: 34px;
-  }
-
-  .menu-toggle {
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-  }
-
-  /* HERO */
-
-  .hero-grid {
-    padding: 30px 0 35px;
-  }
-
-  .hero h1 {
-    font-size: 21px;
-  }
-
-  .hero-content > p {
-    font-size: 8px;
-  }
-
-  .hero-trust div {
-    font-size: 7px;
-  }
-
-  .hero-visual {
-    min-height: 190px;
-  }
-
-  .ring-one {
-    width: 150px;
-    height: 150px;
-  }
-
-  .ring-two {
-    width: 115px;
-    height: 115px;
-  }
-
-  .certificate-visual {
-    width: 135px;
-    min-height: 175px;
-    padding: 5px;
-  }
-
-  .certificate-header span {
-    font-size: 5px;
-  }
-
-  .certificate-mark {
-    width: 22px;
-    height: 22px;
-    font-size: 8px;
-  }
-
-  .certificate-body {
-    min-height: 125px;
-    padding: 8px 3px;
-  }
-
-  .certificate-body small {
-    font-size: 4px;
-  }
-
-  .certificate-body h2 {
-    font-size: 20px;
-    margin-top: 8px;
-  }
-
-  .certificate-body strong {
-    font-size: 7px;
-  }
-
-  .certificate-divider {
-    width: 22px;
-    margin: 7px auto;
-  }
-
-  .certificate-body p {
-    font-size: 5px;
-  }
-
-  .certificate-body span {
-    font-size: 4px;
-  }
-
-  .certificate-footer {
-    font-size: 4px;
-    padding-top: 5px;
-  }
-
-  /* TRUST */
-
-  .trust-inner > span {
-    font-size: 7px;
-  }
-
-  .standard-tags {
-    gap: 3px;
-  }
-
-  .standard-tags span {
-    font-size: 5px;
-    padding: 3px 4px;
-  }
-
-  /* STATS */
-
-  .stat-card {
-    min-height: 70px;
-    padding: 9px;
-  }
-
-  .stat-icon {
-    width: 27px;
-    height: 27px;
-    font-size: 9px;
-  }
-
-  .stat-card strong {
-    font-size: 11px;
-  }
-
-  .stat-card span {
-    font-size: 5px;
-  }
-
-  /* SECTIONS */
-
-  .about-intro,
-  .certifications,
-  .why-us,
-  .compliance,
-  .industries,
-  .process,
-  .recognition,
-  .consultation {
-    padding: 28px 0;
-  }
-
-  .section-heading {
-    margin-bottom: 18px;
-  }
-
-  .section-heading h2,
-  .about-content h2,
-  .recognition h2,
-  .consultation-content h2 {
-    font-size: 18px;
-  }
-
-  .section-heading > p {
-    font-size: 7px;
-  }
-
-  /* ABOUT */
-
-  .about-card {
-    width: 145px;
-    min-height: 180px;
-    padding: 12px;
-  }
-
-  .about-card-icon {
-    width: 28px;
-    height: 28px;
-    margin-bottom: 8px;
-    font-size: 11px;
-  }
-
-  .about-card > span {
-    font-size: 5px;
-  }
-
-  .about-card h3 {
-    font-size: 12px;
-    margin: 8px 0;
-  }
-
-  .about-card p {
-    font-size: 5px;
-  }
-
-  .about-small-card {
-    display: none;
-  }
-
-  /* CARDS */
-
-  .cert-card,
-  .why-card,
-  .compliance-card,
-  .industry-card {
-    padding: 12px;
-  }
-
-  .cert-top i,
-  .why-icon,
-  .compliance-icon,
-  .industry-card i {
-    width: 34px;
-    height: 34px;
-  }
-
-  .cert-card h3,
-  .why-card h3,
-  .compliance-card h3,
-  .industry-card h3 {
-    font-size: 11px;
-  }
-
-  .cert-card p,
-  .why-card p,
-  .compliance-card p,
-  .industry-card p {
-    font-size: 6px;
-    line-height: 1.6;
-  }
-
-  /* PROCESS */
-
-  .process-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 13px;
-  }
-
-  .process-step > span {
-    font-size: 7px;
-  }
-
-  .process-step h3 {
-    font-size: 11px;
-  }
-
-  .process-step p {
-    font-size: 7px;
-  }
-
-  /* RECOGNITION */
-
-  .recognition-box {
-    padding: 12px;
-  }
-
-  .recognition-items {
-    gap: 5px;
-  }
-
-  .recognition-items div {
-    min-height: 55px;
-  }
-
-  .recognition-items strong {
-    font-size: 12px;
-  }
-
-  .recognition-items small {
-    font-size: 5px;
-  }
-
-  /* FORM */
-
-  .form-card {
-    padding: 10px 7px;
-  }
-
-  .form-heading h3 {
-    font-size: 14px;
-  }
-
-  .form-heading p {
-    font-size: 7px;
-  }
-
-  .form-group label {
-    font-size: 7px;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 7px;
-    padding: 7px;
-  }
-
-  .form-group input,
-  .form-group select {
-    height: 32px;
-  }
-
-  .form-submit {
-    min-height: 34px;
-    font-size: 7px;
-  }
-
-  /* CTA */
-
-  .cta {
+  .about-page-hero-content {
     padding: 30px 0;
   }
 
-  .cta h2 {
-    font-size: 18px;
+  .about-page-hero h1 {
+    font-size: 17px;
+    letter-spacing: -0.5px;
   }
 
-  .cta p {
+  .about-page-hero-content > p {
+    font-size: 6.5px;
+  }
+
+  .about-breadcrumb {
+    font-size: 7px;
+    gap: 5px;
+  }
+
+  .about-page-intro,
+  .mission-section,
+  .about-why,
+  .about-certification,
+  .about-process {
+    padding: 35px 0;
+  }
+
+  .about-page-content h2,
+  .about-why-content h2 {
+    font-size: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .about-page-content > p,
+  .about-why-content > p {
     font-size: 7px;
   }
 
-  /* FOOTER */
-
-  .footer-grid {
-    padding: 28px 0 20px;
-    gap: 18px;
+  .about-page-checks div {
+    font-size: 7px;
   }
 
-  .footer-brand img {
-    width: 100px;
+  .about-page-visual {
+    min-height: 215px;
   }
 
-  .footer-company > p {
-    font-size: 6px;
+  .about-page-visual::before {
+    width: 140px;
+    height: 140px;
   }
 
-  .footer-column h3 {
-    font-size: 8px;
+  .about-main-card {
+    width: 145px;
+    min-height: 180px;
+    padding: 9px;
+    border-radius: 9px;
   }
 
-  .footer-column > a,
-  .footer-contact p {
-    font-size: 6px;
+  .about-main-icon {
+    width: 27px;
+    height: 27px;
+    margin-bottom: 7px;
+    font-size: 11px;
   }
 
-  .footer-bottom {
-    padding: 5px 0;
+  .about-main-card > span {
+    font-size: 5px;
+    letter-spacing: 1px;
   }
 
-  .footer-bottom p,
-  .footer-bottom a {
+  .about-main-card h3 {
+    font-size: 11px;
+    margin: 6px 0;
+  }
+
+  .about-main-card > p {
     font-size: 5px;
   }
 
-  /* FIXED BUTTONS */
-
-  .whatsapp {
-    width: 34px;
-    height: 34px;
-    right: 6px;
-    bottom: 6px;
-    font-size: 15px;
+  .about-card-line {
+    width: 28px;
+    margin: 9px 0;
   }
 
-  .back-top {
-    width: 27px;
-    height: 27px;
-    right: 10px;
-    bottom: 47px;
+  .about-card-bottom {
+    gap: 5px;
+  }
+
+  .about-card-bottom strong {
+    font-size: 5px;
+  }
+
+  .about-card-bottom span {
+    font-size: 4px;
+  }
+
+  .about-floating-card {
+    max-width: 130px;
+    padding: 5px;
+  }
+
+  .about-floating-icon {
+    width: 22px;
+    height: 22px;
     font-size: 9px;
   }
-}
 
-/* =========================================================
-   GENERAL RESPONSIVE SAFETY
-========================================================= */
-
-@media (max-width: 768px) {
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
+  .about-floating-card strong {
+    font-size: 6px;
   }
 
-  img {
-    height: auto;
+  .about-floating-card span {
+    font-size: 5px;
   }
 
-  .dropdown-menu {
-    overflow: hidden;
+  .mission-card {
+    padding: 10px;
+    border-radius: 10px;
   }
 
-  textarea {
-    max-width: 100%;
+  .mission-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
   }
 
-  .section-heading.center {
-    width: 100%;
-  }
-}
-
-/* =========================================================
-   TOUCH DEVICES
-========================================================= */
-
-@media (hover: none) and (pointer: coarse) {
-  .cert-card:hover,
-  .why-card:hover,
-  .industry-card:hover,
-  .compliance-card:hover {
-    transform: none;
+  .mission-card h3 {
+    font-size: 11px;
   }
 
-  .certificate-visual:hover {
-    transform: rotate(-2deg);
+  .mission-card p {
+    font-size: 6px;
   }
 
-  .nav-dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
+  .about-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-item {
+    padding: 9px;
+  }
+
+  .benefit-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .benefit-item h3 {
+    font-size: 9px;
+  }
+
+  .benefit-item p {
+    font-size: 6px;
+  }
+
+  .about-cert-card {
+    padding: 11px;
+  }
+
+  .about-cert-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .about-cert-card h3 {
+    font-size: 11px;
+  }
+
+  .about-cert-card p {
+    font-size: 6px;
+  }
+
+  .process-step-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 13px;
+  }
+
+  .about-process-step h3 {
+    font-size: 11px;
+  }
+
+  .about-process-step p {
+    font-size: 6px;
+  }
+
+  .about-page-cta {
+    padding: 35px 0;
+  }
+
+  .about-page-cta h2 {
+    font-size: 16px;
+  }
+
+  .about-page-cta p {
+    font-size: 6px;
+  }
+
+  .about-page-cta-buttons {
+    gap: 6px;
+  }
+
+  .about-page-cta-buttons .btn {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 8px;
   }
 }
