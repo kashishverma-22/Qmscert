@@ -1,7 +1,5 @@
-/* =========================================================
-   QMSCERT REDESIGN
-   Premium Certification Website
-========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --blue: #0067b9;
@@ -62,7 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Manrope", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--dark);
   line-height: 1.2;
 }
@@ -180,7 +178,7 @@ img {
 }
 
 .brand img {
-  width: 110px;
+  width: 100px;
   height: 62px;
   object-fit: contain;
   object-position: left center;
@@ -469,7 +467,7 @@ img {
 
   margin: 20px 0 17px;
 
-  font-size: clamp(48px, 5vw, 72px);
+  font-size: clamp(48px, 4.5vw, 52px);
 
   letter-spacing: -3.5px;
 
@@ -484,7 +482,7 @@ img {
 .hero-content > p {
   max-width: 610px;
 
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.85;
 }
 
@@ -513,7 +511,7 @@ img {
 
   gap: 9px;
 
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
 
   transition: var(--transition);
@@ -990,7 +988,7 @@ img {
 .consultation-content h2 {
   margin-top: 12px;
 
-  font-size: clamp(33px, 4vw, 48px);
+  font-size: clamp(33px, 3vw, 48px);
 
   letter-spacing: -2px;
 
@@ -1006,7 +1004,7 @@ img {
 
 .section-heading > p {
   max-width: 470px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.8;
 }
 
@@ -1044,7 +1042,7 @@ img {
 .about-content > p {
   margin-top: 17px;
   max-width: 640px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .check-list {
@@ -2241,57 +2239,274 @@ img {
 }
 
 /* =========================================================
-   1200px
+   QMSCERT RESPONSIVE DESIGN
+   1200px → 200px
+========================================================= */
+
+/* =========================================================
+   1200px - LARGE LAPTOP
 ========================================================= */
 
 @media (max-width: 1200px) {
+  :root {
+    --container: 1100px;
+  }
+
   .container {
-    width: 94%;
+    width: min(94%, var(--container));
+  }
+
+  /* NAVBAR */
+  .navbar {
+    gap: 18px;
+  }
+
+  .nav-menu {
+    gap: 0;
   }
 
   .nav-link,
   .dropdown-toggle {
-    padding-left: 7px;
-    padding-right: 7px;
+    padding: 10px 8px;
     font-size: 12px;
   }
 
   .nav-btn {
-    padding: 0 12px;
+    padding: 0 14px;
+    margin-left: 5px;
+  }
+
+  /* HERO */
+  .hero-grid {
+    gap: 25px;
   }
 
   .hero h1 {
-    font-size: 57px;
+    font-size: clamp(44px, 5vw, 62px);
   }
 
+  .certificate-visual {
+    width: 370px;
+  }
+
+  .ring-one {
+    width: 460px;
+    height: 460px;
+  }
+
+  .ring-two {
+    width: 360px;
+    height: 360px;
+  }
+
+  /* SECTIONS */
+  .about-intro,
+  .certifications,
+  .why-us,
+  .compliance,
+  .industries,
+  .process,
+  .recognition,
+  .consultation {
+    padding: 85px 0;
+  }
+
+  .about-grid {
+    gap: 55px;
+  }
+
+  .recognition-grid,
+  .consultation-grid {
+    gap: 55px;
+  }
+
+  /* CARDS */
   .cert-grid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .cert-card {
+    padding: 22px;
+  }
+
+  .why-grid {
+    gap: 14px;
+  }
+
+  .why-card {
+    padding: 24px;
   }
 
   .compliance-grid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
+  .compliance-card {
+    padding: 20px;
+  }
+
+  .industry-grid {
+    gap: 12px;
+  }
+
+  /* FOOTER */
   .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
   }
 
-  .footer-company {
-    grid-column: span 4;
+  .footer-contact {
+    grid-column: span 2;
   }
 }
 
 /* =========================================================
-   992px
+   1100px - TABLET LANDSCAPE / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+  /* TOP BAR */
+  .topbar-left,
+  .topbar-right {
+    gap: 14px;
+  }
+
+  /* HEADER */
+  .navbar {
+    min-height: 78px;
+  }
+
+  .brand img {
+    width: 90px;
+    height: 55px;
+  }
+
+  .nav-link,
+  .dropdown-toggle {
+    font-size: 11px;
+    padding: 9px 7px;
+  }
+
+  .nav-btn {
+    min-height: 40px;
+    font-size: 11px;
+    padding: 0 12px;
+  }
+
+  /* HERO */
+  .hero,
+  .hero-grid {
+    min-height: 610px;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 5vw, 56px);
+    letter-spacing: -2.5px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-visual {
+    min-height: 510px;
+  }
+
+  .certificate-visual {
+    width: 350px;
+    min-height: 420px;
+  }
+
+  .certificate-body {
+    min-height: 305px;
+  }
+
+  .certificate-body h2 {
+    font-size: 57px;
+  }
+
+  .ring-one {
+    width: 430px;
+    height: 430px;
+  }
+
+  .ring-two {
+    width: 340px;
+    height: 340px;
+  }
+
+  /* SECTIONS */
+  .section-heading {
+    gap: 25px;
+  }
+
+  .section-heading h2,
+  .about-content h2,
+  .recognition h2,
+  .consultation-content h2 {
+    font-size: clamp(31px, 4vw, 43px);
+  }
+
+  /* CERTIFICATIONS */
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* COMPLIANCE */
+  .compliance-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* INDUSTRIES */
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* PROCESS */
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 30px;
+  }
+
+  .process-arrow {
+    display: none;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .footer-contact {
+    grid-column: auto;
+  }
+}
+
+/* =========================================================
+   992px - TABLET
 ========================================================= */
 
 @media (max-width: 992px) {
+  .container {
+    width: min(92%, 900px);
+  }
+
+  /* TOP BAR */
+  .topbar-inner {
+    min-height: 38px;
+  }
+
   .topbar-left span:nth-child(2) {
     display: none;
   }
 
+  .topbar-right {
+    gap: 10px;
+  }
+
+  /* NAVIGATION */
   .navbar {
-    min-height: 76px;
+    min-height: 75px;
   }
 
   .menu-toggle {
@@ -2302,134 +2517,173 @@ img {
 
   .nav-menu {
     position: absolute;
-
     top: 100%;
     left: 0;
-
     width: 100%;
-
     max-height: 0;
-
     overflow: hidden;
-
     opacity: 0;
     visibility: hidden;
-
     flex-direction: column;
     align-items: stretch;
-
-    padding: 0 4%;
-
+    gap: 0;
     background: var(--white);
-
     border-top: 1px solid var(--border);
-
     box-shadow: var(--shadow);
-
     transition:
       max-height 0.4s ease,
       opacity 0.3s ease,
-      padding 0.3s ease;
+      visibility 0.3s ease;
   }
 
+  /*
+     If your JS adds .active to .nav-menu,
+     this will open the menu.
+  */
   .nav-menu.active {
-    max-height: 85vh;
-
+    max-height: 80vh;
     overflow-y: auto;
-
     opacity: 1;
     visibility: visible;
-
-    padding-top: 12px;
-    padding-bottom: 18px;
   }
 
   .nav-link,
   .dropdown-toggle {
     width: 100%;
-
-    min-height: 47px;
-
-    padding: 11px 5px;
-
+    min-height: 48px;
+    padding: 13px 5%;
     justify-content: space-between;
-
     border-bottom: 1px solid var(--border);
+    font-size: 13px;
   }
 
   .nav-link::after {
     display: none;
   }
 
+  .nav-link:hover,
+  .nav-link.active,
+  .dropdown-toggle:hover {
+    background: var(--light-blue);
+  }
+
+  .nav-btn {
+    width: calc(100% - 10%);
+    margin: 12px 5%;
+    min-height: 45px;
+  }
+
+  /* DROPDOWN */
   .nav-dropdown {
     width: 100%;
   }
 
   .dropdown-menu {
     position: static;
-
-    display: none;
-
     width: 100%;
-
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 5%;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
     opacity: 1;
     visibility: visible;
-
     transform: none;
+    background: var(--light);
+    transition: max-height 0.35s ease;
+  }
 
-    box-shadow: none;
-
-    border: 0;
-
-    border-radius: 0;
-
-    padding: 5px 0 8px 15px;
+  .nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
   }
 
   .nav-dropdown.open .dropdown-menu {
-    display: block;
+    max-height: 500px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .dropdown-menu::before {
     display: none;
   }
 
-  .nav-btn {
-    margin: 13px 0 0;
+  .dropdown-menu a {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
 
-    justify-content: center;
+  /* HERO */
+  .hero,
+  .hero-grid {
+    min-height: auto;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-
-    min-height: auto;
-
-    padding-top: 35px;
-    padding-bottom: 45px;
+    gap: 10px;
   }
 
   .hero-content {
-    padding-top: 35px;
-
+    padding: 75px 0 35px;
     text-align: center;
   }
 
-  .hero h1,
+  .eyebrow {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(40px, 7vw, 58px);
+  }
+
   .hero-content > p {
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .hero-buttons,
-  .hero-trust {
+  .hero-buttons {
     justify-content: center;
   }
 
-  .hero-visual {
-    min-height: 500px;
+  .hero-trust {
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
+  .hero-visual {
+    min-height: 530px;
+  }
+
+  .box-one {
+    left: 5%;
+    top: 75px;
+  }
+
+  .box-two {
+    right: 5%;
+    bottom: 65px;
+  }
+
+  /* TRUST */
+  .trust-inner {
+    padding: 18px 0;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .standard-tags {
+    justify-content: center;
+  }
+
+  /* STATS */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2442,77 +2696,91 @@ img {
     border-bottom: 1px solid var(--border);
   }
 
-  .about-grid,
-  .recognition-grid,
-  .consultation-grid {
+  /* ABOUT */
+  .about-grid {
     grid-template-columns: 1fr;
-
-    gap: 55px;
+    gap: 50px;
   }
 
-  .about-content,
-  .recognition-grid > div:first-child,
+  .about-content {
+    text-align: center;
+  }
+
+  .about-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .check-list {
+    text-align: left;
+  }
+
+  .about-visual {
+    min-height: 420px;
+  }
+
+  /* SECTION HEADINGS */
+  .section-heading {
+    display: block;
+    text-align: center;
+  }
+
+  .section-heading > div {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .section-heading > p {
+    max-width: 650px;
+    margin: 18px auto 0;
+  }
+
+  /* WHY */
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* RECOGNITION */
+  .recognition-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .recognition-grid > div:first-child {
+    text-align: center;
+  }
+
+  .recognition-grid > div:first-child > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* CONSULTATION */
+  .consultation-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
   .consultation-content {
     text-align: center;
   }
 
-  .about-content > p,
   .consultation-content > p {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .check-list,
-  .recognition-list {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: left;
-  }
-
-  .text-btn {
-    justify-content: center;
-  }
-
-  .about-visual {
-    max-width: 500px;
-    width: 100%;
-    margin: auto;
-  }
-
   .contact-info {
-    max-width: 400px;
-    margin: auto;
+    align-items: center;
+  }
 
+  .contact-info > div {
+    width: 300px;
+    max-width: 100%;
     text-align: left;
   }
 
-  .form-card {
-    max-width: 700px;
-    width: 100%;
-    margin: auto;
-  }
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .industry-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .process-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .process-arrow {
-    padding: 0;
-    text-align: center;
-    transform: rotate(90deg);
-  }
-
+  /* CTA */
   .cta-inner {
     flex-direction: column;
     text-align: center;
@@ -2526,65 +2794,180 @@ img {
   .cta-buttons {
     justify-content: center;
   }
+
+  /* FOOTER */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .footer-company {
+    grid-column: span 2;
+  }
 }
 
 /* =========================================================
-   768px
+   768px - TABLET PORTRAIT / LARGE MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
+  :root {
+    --radius: 11px;
+  }
+
+  .container {
+    width: min(92%, 680px);
+  }
+
+  /* TOP BAR */
   .topbar {
+    font-size: 10px;
+  }
+
+  .topbar-inner {
+    justify-content: center;
+  }
+
+  .topbar-left {
+    justify-content: center;
+  }
+
+  .topbar-right > a:not(.social-links) {
     display: none;
   }
 
+  .topbar-right {
+    display: none;
+  }
+
+  /* HEADER */
   .brand img {
-    width: 160px;
+    width: 88px;
+    height: 53px;
+  }
+
+  /* HERO */
+  .hero-content {
+    padding: 60px 0 30px;
   }
 
   .hero h1 {
-    font-size: 47px;
+    font-size: clamp(35px, 9vw, 50px);
     letter-spacing: -2px;
   }
 
   .hero-content > p {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.8;
   }
 
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .btn {
+    min-height: 46px;
+    padding: 0 17px;
+    font-size: 12px;
+  }
+
+  .hero-trust {
+    gap: 13px;
+    margin-top: 28px;
+  }
+
+  .hero-trust div {
+    font-size: 10px;
+  }
+
+  /* HERO VISUAL */
   .hero-visual {
-    min-height: 455px;
+    min-height: 475px;
   }
 
   .certificate-visual {
-    width: 345px;
-    min-height: 405px;
+    width: min(340px, 78%);
+    min-height: 400px;
+    padding: 17px;
   }
 
   .certificate-body {
     min-height: 295px;
+    padding: 30px 15px;
   }
 
   .certificate-body h2 {
-    font-size: 55px;
+    font-size: 53px;
+  }
+
+  .certificate-body strong {
+    font-size: 19px;
   }
 
   .ring-one {
-    width: 430px;
-    height: 430px;
+    width: 400px;
+    height: 400px;
   }
 
   .ring-two {
-    width: 330px;
-    height: 330px;
+    width: 320px;
+    height: 320px;
+  }
+
+  .floating-box {
+    padding: 10px;
+  }
+
+  .floating-box > i {
+    width: 34px;
+    height: 34px;
   }
 
   .box-one {
     left: 0;
+    top: 65px;
   }
 
   .box-two {
     right: 0;
+    bottom: 55px;
   }
 
+  /* TRUST STRIP */
+  .trust-inner {
+    min-height: auto;
+    padding: 20px 0;
+  }
+
+  .standard-tags {
+    gap: 5px;
+  }
+
+  .standard-tags span {
+    padding: 5px 8px;
+    font-size: 8px;
+  }
+
+  /* STATS */
+  .stats {
+    padding: 22px 0;
+  }
+
+  .stat-card {
+    min-height: 90px;
+    padding: 15px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stat-card strong {
+    font-size: 17px;
+  }
+
+  /* SECTIONS */
   .about-intro,
   .certifications,
   .why-us,
@@ -2593,29 +2976,114 @@ img {
   .process,
   .recognition,
   .consultation {
-    padding: 75px 0;
+    padding: 70px 0;
   }
 
   .section-heading {
-    display: block;
-    text-align: center;
+    margin-bottom: 38px;
   }
 
-  .section-heading > p {
-    margin: 18px auto 0;
+  .section-heading h2,
+  .about-content h2,
+  .recognition h2,
+  .consultation-content h2 {
+    font-size: clamp(29px, 7vw, 39px);
+    letter-spacing: -1.5px;
   }
 
-  .cert-grid,
+  /* ABOUT */
+  .about-card {
+    width: min(350px, 85%);
+    min-height: 330px;
+    padding: 32px;
+  }
+
+  .about-card h3 {
+    font-size: 27px;
+  }
+
+  .about-small-card {
+    right: 0;
+  }
+
+  /* CERTIFICATION */
+  .cert-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .cert-card {
+    padding: 20px;
+  }
+
+  .cert-card p {
+    min-height: auto;
+  }
+
+  /* WHY */
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .why-card {
+    min-height: 230px;
+    padding: 21px;
+  }
+
+  /* COMPLIANCE */
   .compliance-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 
+  .compliance-card {
+    min-height: 275px;
+    padding: 20px;
+  }
+
+  .compliance-card p {
+    min-height: auto;
+  }
+
+  /* INDUSTRIES */
   .industry-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
+  /* PROCESS */
+  .process-grid {
+    gap: 35px 20px;
+  }
+
+  /* RECOGNITION */
+  .recognition-list {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .recognition-box {
+    padding: 23px;
+  }
+
+  /* FORM */
+  .form-card {
+    padding: 25px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 60px 0;
+  }
+
+  .cta h2 {
+    font-size: clamp(30px, 7vw, 40px);
+  }
+
+  /* FOOTER */
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    padding: 55px 0 40px;
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer-company {
@@ -2623,42 +3091,92 @@ img {
   }
 
   .footer-bottom-inner {
+    min-height: auto;
+    padding: 18px 0;
     flex-direction: column;
-    justify-content: center;
-    padding: 14px 0;
+    text-align: center;
+    gap: 7px;
+  }
+
+  .footer-bottom a {
+    margin: 0 7px;
+  }
+
+  /* FLOAT BUTTONS */
+  .whatsapp {
+    right: 17px;
+    bottom: 17px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .back-top {
+    right: 18px;
+    bottom: 75px;
   }
 }
 
 /* =========================================================
-   576px
+   600px - MOBILE
 ========================================================= */
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .container {
-    width: 92%;
+    width: 91%;
+  }
+
+  /* TOPBAR */
+  .topbar-left {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .topbar-left span {
+    font-size: 9px;
+  }
+
+  /* HEADER */
+  .navbar {
+    min-height: 68px;
   }
 
   .brand img {
-    width: 145px;
-    height: 55px;
+    width: 82px;
+    height: 50px;
   }
 
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* HERO */
   .hero-content {
-    padding-top: 25px;
+    padding: 50px 0 25px;
+  }
+
+  .eyebrow,
+  .section-label {
+    font-size: 9px;
+    letter-spacing: 1.2px;
   }
 
   .hero h1 {
-    font-size: 38px;
-    letter-spacing: -1.5px;
+    font-size: clamp(31px, 10vw, 43px);
+    letter-spacing: -1.6px;
+    margin: 16px 0 14px;
   }
 
-  .eyebrow {
-    font-size: 9px;
-    letter-spacing: 1px;
+  .hero-content > p {
+    font-size: 12px;
   }
 
   .hero-buttons {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .hero-buttons .btn {
@@ -2668,33 +3186,56 @@ img {
   .hero-trust {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    gap: 12px;
+    gap: 10px;
   }
 
+  .hero-trust div {
+    justify-content: center;
+    font-size: 9px;
+  }
+
+  /* HERO VISUAL */
   .hero-visual {
-    min-height: 395px;
+    min-height: 440px;
   }
 
   .certificate-visual {
-    width: 290px;
-    min-height: 350px;
-
+    width: min(310px, 78%);
+    min-height: 365px;
     padding: 14px;
   }
 
-  .certificate-body {
-    min-height: 250px;
+  .certificate-header {
+    padding-bottom: 11px;
+  }
 
+  .certificate-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .certificate-body {
+    min-height: 270px;
+    margin-top: 13px;
     padding: 24px 12px;
   }
 
   .certificate-body h2 {
-    font-size: 44px;
+    margin-top: 20px;
+    font-size: 45px;
+    letter-spacing: -2px;
   }
 
   .certificate-body strong {
-    font-size: 18px;
+    font-size: 17px;
+  }
+
+  .certificate-divider {
+    margin: 20px auto 15px;
+  }
+
+  .certificate-body p {
+    font-size: 12px;
   }
 
   .ring-one {
@@ -2703,19 +3244,19 @@ img {
   }
 
   .ring-two {
-    width: 265px;
-    height: 265px;
+    width: 275px;
+    height: 275px;
   }
 
   .floating-box {
-    max-width: 140px;
-    padding: 9px;
+    gap: 7px;
+    padding: 8px;
   }
 
   .floating-box > i {
     width: 30px;
     height: 30px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .floating-box strong {
@@ -2723,30 +3264,359 @@ img {
   }
 
   .floating-box span {
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .box-one {
-    left: -3px;
+    left: -5px;
+    top: 65px;
+  }
+
+  .box-two {
+    right: -5px;
+    bottom: 45px;
+  }
+
+  /* STATS */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+  }
+
+  .stat-card {
+    gap: 8px;
+    padding: 12px;
+    min-height: 82px;
+  }
+
+  .stat-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .stat-card strong {
+    font-size: 15px;
+  }
+
+  .stat-card span {
+    font-size: 8px;
+  }
+
+  /* SECTION */
+  .about-intro,
+  .certifications,
+  .why-us,
+  .compliance,
+  .industries,
+  .process,
+  .recognition,
+  .consultation {
+    padding: 58px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2,
+  .about-content h2,
+  .recognition h2,
+  .consultation-content h2 {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  .section-heading > p,
+  .about-content > p {
+    font-size: 11px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    gap: 35px;
+  }
+
+  .check-list {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    text-align: left;
+  }
+
+  .about-visual {
+    min-height: 370px;
+  }
+
+  .about-card {
+    width: 84%;
+    min-height: 310px;
+    padding: 27px;
+  }
+
+  .about-card h3 {
+    font-size: 24px;
+  }
+
+  .about-small-card {
+    right: 0;
+    bottom: 10px;
+    padding: 10px;
+  }
+
+  /* CERTIFICATION */
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-card {
+    padding: 20px;
+  }
+
+  .cert-card p {
+    margin-bottom: 15px;
+  }
+
+  /* WHY */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-card {
+    min-height: auto;
+  }
+
+  /* COMPLIANCE */
+  .compliance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-card {
+    min-height: auto;
+  }
+
+  /* INDUSTRIES */
+  .industry-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .industry-card {
+    min-height: 145px;
+    padding: 17px;
+  }
+
+  .industry-card i {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 12px;
+  }
+
+  .industry-card h3 {
+    font-size: 13px;
+  }
+
+  .industry-card p {
+    font-size: 9px;
+  }
+
+  /* PROCESS */
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .process-step p {
+    max-width: 300px;
+    margin: auto;
+  }
+
+  /* RECOGNITION */
+  .recognition-list {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .recognition-items {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recognition-box {
+    padding: 19px;
+  }
+
+  /* FORM */
+  .form-card {
+    padding: 20px 16px;
+  }
+
+  .form-heading h3 {
+    font-size: 21px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 42px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 52px 0;
+  }
+
+  .cta-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 48px 0 35px;
+  }
+
+  .footer-company {
+    grid-column: auto;
+  }
+
+  .footer-brand img {
+    width: 160px;
+  }
+
+  .footer-company > p {
+    max-width: 100%;
+  }
+
+  .footer-bottom p,
+  .footer-bottom a {
+    font-size: 8px;
+  }
+
+  /* BUTTONS */
+  .center-button .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   480px - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  /* TOPBAR */
+  .topbar-left span {
+    font-size: 8px;
+  }
+
+  /* NAV */
+  .brand img {
+    width: 76px;
+    height: 47px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* HERO */
+  .hero-content {
+    padding-top: 42px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 10vw, 37px);
+  }
+
+  .hero-content > p {
+    font-size: 11px;
+  }
+
+  .hero-trust {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-trust div {
+    justify-content: center;
+  }
+
+  /* HERO CARD */
+  .hero-visual {
+    min-height: 390px;
+  }
+
+  .certificate-visual {
+    width: 76%;
+    min-height: 330px;
+    padding: 11px;
+  }
+
+  .certificate-body {
+    min-height: 245px;
+    padding: 20px 8px;
+  }
+
+  .certificate-body small {
+    font-size: 7px;
+  }
+
+  .certificate-body h2 {
+    font-size: 39px;
+  }
+
+  .certificate-body strong {
+    font-size: 14px;
+  }
+
+  .certificate-body p {
+    font-size: 10px;
+  }
+
+  .certificate-body span {
+    font-size: 8px;
+  }
+
+  .certificate-footer {
+    font-size: 7px;
+  }
+
+  .ring-one {
+    width: 290px;
+    height: 290px;
+  }
+
+  .ring-two {
+    width: 235px;
+    height: 235px;
+  }
+
+  .floating-box {
+    max-width: 125px;
+  }
+
+  .box-one {
+    left: -7px;
     top: 60px;
   }
 
   .box-two {
-    right: -3px;
-    bottom: 40px;
+    right: -7px;
+    bottom: 35px;
   }
 
-  .trust-inner {
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 0;
-    text-align: center;
-  }
-
-  .standard-tags {
-    justify-content: center;
-  }
-
+  /* STATS */
   .stats-grid {
     grid-template-columns: 1fr;
   }
@@ -2760,186 +3630,171 @@ img {
     border-bottom: 0;
   }
 
+  /* SECTION */
+  .about-intro,
+  .certifications,
+  .why-us,
+  .compliance,
+  .industries,
+  .process,
+  .recognition,
+  .consultation {
+    padding: 50px 0;
+  }
+
   .section-heading h2,
   .about-content h2,
   .recognition h2,
   .consultation-content h2 {
-    font-size: 31px;
-    letter-spacing: -1px;
+    font-size: 27px;
   }
 
-  .check-list,
-  .recognition-list {
-    grid-template-columns: 1fr;
-  }
-
+  /* ABOUT */
   .about-card {
-    width: 290px;
-    min-height: 325px;
+    width: 88%;
+    min-height: 290px;
+    padding: 24px;
+  }
 
-    padding: 30px;
+  .about-card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
   }
 
   .about-card h3 {
-    font-size: 25px;
+    font-size: 22px;
+  }
+
+  .about-card p {
+    font-size: 10px;
   }
 
   .about-small-card {
-    right: 0;
-    bottom: 5px;
+    right: -3px;
+    padding: 8px;
   }
 
-  .cert-grid,
-  .compliance-grid,
+  .about-small-card > i {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* INDUSTRIES */
   .industry-grid {
     grid-template-columns: 1fr;
   }
 
-  .cert-card p,
-  .compliance-card p {
-    min-height: auto;
+  .industry-card {
+    min-height: 125px;
   }
 
-  .recognition-box {
-    padding: 23px;
-  }
-
-  .form-row {
+  /* RECOGNITION */
+  .recognition-items {
     grid-template-columns: 1fr;
-    gap: 0;
   }
 
+  /* FORM */
   .form-card {
-    padding: 24px 18px;
+    padding: 18px 13px;
   }
 
-  .cta {
-    padding: 60px 0;
+  .form-heading h3 {
+    font-size: 19px;
   }
 
+  /* CTA */
   .cta h2 {
-    font-size: 33px;
-  }
-
-  .cta-buttons {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .cta-buttons .btn {
-    width: 100%;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-company {
-    grid-column: auto;
-  }
-}
-
-/* =========================================================
-   400px
-========================================================= */
-
-@media (max-width: 400px) {
-  .brand img {
-    width: 130px;
-  }
-
-  .hero h1 {
-    font-size: 33px;
-  }
-
-  .hero-trust {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-visual {
-    min-height: 350px;
-  }
-
-  .certificate-visual {
-    width: 255px;
-    min-height: 310px;
-  }
-
-  .certificate-body {
-    min-height: 220px;
-  }
-
-  .certificate-body h2 {
-    font-size: 37px;
-  }
-
-  .certificate-body strong {
-    font-size: 15px;
-  }
-
-  .certificate-body p {
-    font-size: 11px;
-  }
-
-  .floating-box {
-    display: none;
-  }
-
-  .ring-one {
-    width: 290px;
-    height: 290px;
-  }
-
-  .ring-two {
-    width: 225px;
-    height: 225px;
-  }
-
-  .section-heading h2,
-  .about-content h2,
-  .recognition h2,
-  .consultation-content h2 {
     font-size: 28px;
   }
 
-  .about-card {
-    width: 255px;
-    padding: 24px;
+  .cta p {
+    font-size: 10px;
   }
 
-  .about-small-card {
-    position: relative;
-    right: auto;
-    bottom: auto;
+  /* FLOATING */
+  .whatsapp {
+    right: 12px;
+    bottom: 12px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
 
-    margin-top: -30px;
+  .back-top {
+    right: 13px;
+    bottom: 68px;
+    width: 37px;
+    height: 37px;
   }
 }
 
 /* =========================================================
-   320px
+   380px - EXTRA SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   .container {
-    width: 94%;
+    width: 88%;
+  }
+
+  .topbar-left span {
+    font-size: 7px;
+  }
+
+  .navbar {
+    min-height: 62px;
   }
 
   .brand img {
-    width: 120px;
+    width: 70px;
+    height: 43px;
   }
 
+  .menu-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  /* HERO */
   .hero h1 {
-    font-size: 29px;
+    font-size: 28px;
+    letter-spacing: -1px;
   }
 
   .hero-content > p {
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  .btn {
+    min-height: 43px;
+    font-size: 10px;
+  }
+
+  .hero-visual {
+    min-height: 355px;
   }
 
   .certificate-visual {
-    width: 230px;
+    width: 78%;
+    min-height: 305px;
+  }
+
+  .certificate-body {
+    min-height: 225px;
+  }
+
+  .certificate-body h2 {
+    font-size: 34px;
+  }
+
+  .certificate-body strong {
+    font-size: 12px;
+  }
+
+  .certificate-body p {
+    font-size: 9px;
   }
 
   .ring-one {
@@ -2948,18 +3803,688 @@ img {
   }
 
   .ring-two {
-    width: 195px;
-    height: 195px;
+    width: 205px;
+    height: 205px;
+  }
+
+  .floating-box {
+    max-width: 105px;
+    padding: 6px;
+  }
+
+  .floating-box > i {
+    width: 27px;
+    height: 27px;
+    font-size: 9px;
+  }
+
+  .floating-box strong {
+    font-size: 7px;
+  }
+
+  .floating-box span {
+    font-size: 6px;
+  }
+
+  .box-one {
+    left: -10px;
+  }
+
+  .box-two {
+    right: -10px;
+  }
+
+  /* SECTION */
+  .about-intro,
+  .certifications,
+  .why-us,
+  .compliance,
+  .industries,
+  .process,
+  .recognition,
+  .consultation {
+    padding: 43px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 27px;
   }
 
   .section-heading h2,
   .about-content h2,
   .recognition h2,
   .consultation-content h2 {
+    font-size: 24px;
+  }
+
+  .section-heading > p,
+  .about-content > p {
+    font-size: 10px;
+  }
+
+  /* ABOUT */
+  .about-card {
+    width: 90%;
+    min-height: 265px;
+    padding: 20px;
+  }
+
+  .about-card h3 {
+    font-size: 20px;
+  }
+
+  .about-card p {
+    font-size: 9px;
+  }
+
+  .about-small-card {
+    right: -8px;
+  }
+
+  /* CARDS */
+  .cert-card,
+  .why-card,
+  .compliance-card {
+    padding: 17px;
+  }
+
+  .cert-card h3,
+  .why-card h3 {
+    font-size: 15px;
+  }
+
+  /* FORM */
+  .form-heading h3 {
+    font-size: 17px;
+  }
+
+  .form-heading p {
+    font-size: 9px;
+  }
+
+  .form-group label {
+    font-size: 9px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 10px;
+    padding: 9px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 45px 0;
+  }
+
+  .cta h2 {
     font-size: 25px;
   }
 
+  /* FOOTER */
+  .footer-grid {
+    gap: 25px;
+    padding: 40px 0 30px;
+  }
+
+  .footer-column h3 {
+    font-size: 12px;
+  }
+
+  .footer-column > a,
+  .footer-contact p {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   320px - VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 320px) {
+  .container {
+    width: 86%;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .navbar {
+    min-height: 58px;
+  }
+
+  .brand img {
+    width: 65px;
+    height: 40px;
+  }
+
+  .menu-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* HERO */
+  .hero-content {
+    padding: 38px 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+
+  .hero-content > p {
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    gap: 7px;
+  }
+
+  .btn {
+    min-height: 40px;
+    font-size: 9px;
+    padding: 0 12px;
+  }
+
+  .hero-visual {
+    min-height: 315px;
+  }
+
+  .certificate-visual {
+    width: 76%;
+    min-height: 275px;
+    padding: 9px;
+  }
+
+  .certificate-body {
+    min-height: 200px;
+    margin-top: 9px;
+    padding: 15px 5px;
+  }
+
+  .certificate-body h2 {
+    font-size: 29px;
+    margin-top: 15px;
+  }
+
+  .certificate-body strong {
+    font-size: 10px;
+  }
+
+  .certificate-divider {
+    width: 45px;
+    margin: 15px auto 10px;
+  }
+
+  .certificate-body p {
+    font-size: 8px;
+  }
+
+  .certificate-footer {
+    padding-top: 8px;
+    font-size: 6px;
+  }
+
+  .certificate-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .ring-one {
+    width: 225px;
+    height: 225px;
+  }
+
+  .ring-two {
+    width: 180px;
+    height: 180px;
+  }
+
+  .floating-box {
+    display: none;
+  }
+
+  /* TRUST */
+  .trust-inner > span {
+    font-size: 9px;
+  }
+
+  .standard-tags span {
+    font-size: 7px;
+    padding: 4px 6px;
+  }
+
+  /* STATS */
+  .stat-card {
+    min-height: 70px;
+    padding: 10px;
+  }
+
+  .stat-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .stat-card strong {
+    font-size: 13px;
+  }
+
+  .stat-card span {
+    font-size: 7px;
+  }
+
+  /* SECTIONS */
+  .about-intro,
+  .certifications,
+  .why-us,
+  .compliance,
+  .industries,
+  .process,
+  .recognition,
+  .consultation {
+    padding: 38px 0;
+  }
+
+  .section-heading h2,
+  .about-content h2,
+  .recognition h2,
+  .consultation-content h2 {
+    font-size: 21px;
+    letter-spacing: -0.8px;
+  }
+
+  .section-heading > p,
+  .about-content > p {
+    font-size: 9px;
+  }
+
+  .eyebrow,
+  .section-label {
+    font-size: 7px;
+  }
+
+  /* ABOUT */
+  .about-card {
+    width: 92%;
+    min-height: 235px;
+    padding: 17px;
+  }
+
+  .about-card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .about-card h3 {
+    font-size: 17px;
+  }
+
+  .about-card p {
+    font-size: 8px;
+  }
+
+  .about-small-card {
+    padding: 6px;
+  }
+
+  .about-small-card > i {
+    width: 28px;
+    height: 28px;
+  }
+
+  .about-small-card strong {
+    font-size: 8px;
+  }
+
+  .about-small-card span {
+    font-size: 7px;
+  }
+
+  /* CARDS */
+  .cert-card,
+  .why-card,
+  .compliance-card {
+    padding: 14px;
+  }
+
+  .cert-card h3,
+  .why-card h3,
+  .compliance-card h3 {
+    font-size: 13px;
+  }
+
+  .cert-card p,
+  .why-card p,
+  .compliance-card p {
+    font-size: 9px;
+  }
+
+  .why-icon,
+  .compliance-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 14px;
+  }
+
+  /* INDUSTRY */
+  .industry-card {
+    min-height: 110px;
+    padding: 13px;
+  }
+
+  .industry-card i {
+    width: 34px;
+    height: 34px;
+  }
+
+  .industry-card h3 {
+    font-size: 12px;
+  }
+
+  .industry-card p {
+    font-size: 8px;
+  }
+
+  /* PROCESS */
+  .process-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .process-step h3 {
+    font-size: 13px;
+  }
+
+  .process-step p {
+    font-size: 8px;
+  }
+
+  /* RECOGNITION */
+  .recognition-list div {
+    font-size: 9px;
+  }
+
+  .recognition-items strong {
+    font-size: 17px;
+  }
+
+  .recognition-items small {
+    font-size: 7px;
+  }
+
+  /* FORM */
   .form-card {
-    padding: 20px 13px;
+    padding: 15px 10px;
+  }
+
+  .form-heading h3 {
+    font-size: 15px;
+  }
+
+  .form-heading p {
+    font-size: 8px;
+  }
+
+  .form-group {
+    margin-bottom: 9px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 38px;
+  }
+
+  .form-group textarea {
+    min-height: 70px;
+  }
+
+  .form-submit {
+    min-height: 40px;
+    font-size: 9px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 38px 0;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+  }
+
+  .cta p {
+    font-size: 9px;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    padding: 35px 0 25px;
+    gap: 22px;
+  }
+
+  .footer-brand img {
+    width: 140px;
+  }
+
+  .footer-company > p {
+    font-size: 8px;
+  }
+
+  .footer-column h3 {
+    font-size: 10px;
+  }
+
+  .footer-column > a,
+  .footer-contact p {
+    font-size: 8px;
+  }
+
+  .footer-social a {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* FLOAT */
+  .whatsapp {
+    width: 40px;
+    height: 40px;
+    right: 9px;
+    bottom: 9px;
+    font-size: 17px;
+  }
+
+  .back-top {
+    width: 32px;
+    height: 32px;
+    right: 10px;
+    bottom: 58px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   250px - ULTRA SMALL
+========================================================= */
+
+@media (max-width: 250px) {
+  .container {
+    width: 84%;
+  }
+
+  .brand img {
+    width: 58px;
+    height: 36px;
+  }
+
+  .menu-toggle {
+    width: 31px;
+    height: 31px;
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero-content > p {
+    font-size: 8px;
+  }
+
+  .certificate-visual {
+    width: 82%;
+  }
+
+  .ring-one {
+    width: 195px;
+    height: 195px;
+  }
+
+  .ring-two {
+    width: 155px;
+    height: 155px;
+  }
+
+  .section-heading h2,
+  .about-content h2,
+  .recognition h2,
+  .consultation-content h2 {
+    font-size: 19px;
+  }
+
+  .cert-card,
+  .why-card,
+  .compliance-card,
+  .industry-card {
+    padding: 11px;
+  }
+
+  .footer-grid {
+    gap: 18px;
+  }
+}
+
+/* =========================================================
+   200px - MINIMUM MOBILE
+========================================================= */
+
+@media (max-width: 200px) {
+  .container {
+    width: 82%;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero-content > p {
+    font-size: 7px;
+  }
+
+  .hero-visual {
+    min-height: 280px;
+  }
+
+  .certificate-visual {
+    width: 85%;
+    min-height: 240px;
+  }
+
+  .certificate-body {
+    min-height: 175px;
+  }
+
+  .certificate-body h2 {
+    font-size: 24px;
+  }
+
+  .certificate-body strong {
+    font-size: 9px;
+  }
+
+  .certificate-body p {
+    font-size: 7px;
+  }
+
+  .ring-one {
+    width: 170px;
+    height: 170px;
+  }
+
+  .ring-two {
+    width: 135px;
+    height: 135px;
+  }
+
+  .section-heading h2,
+  .about-content h2,
+  .recognition h2,
+  .consultation-content h2 {
+    font-size: 17px;
+  }
+
+  .btn {
+    min-height: 37px;
+    font-size: 8px;
+  }
+
+  .stat-card {
+    padding: 8px;
+  }
+
+  .stat-card strong {
+    font-size: 11px;
+  }
+
+  .stat-card span {
+    font-size: 6px;
+  }
+
+  .footer-brand img {
+    width: 120px;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICE IMPROVEMENTS
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .cert-card:hover,
+  .why-card:hover,
+  .industry-card:hover,
+  .compliance-card:hover {
+    transform: none;
+  }
+
+  .certificate-visual:hover {
+    transform: rotate(-2deg);
+  }
+
+  .btn:hover,
+  .nav-btn:hover,
+  .form-submit:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
