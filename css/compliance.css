@@ -1,0 +1,1960 @@
+/* =========================================================
+   :ROOT - CSS VARIABLES
+========================================================= */
+
+:root {
+  --white: #ffffff;
+  --light: #f8fbfd;
+  --light-blue: #e8f4f9;
+  --dark: #0a1a2b;
+  --text: #3a4b5c;
+  --muted: #8a9baa;
+  --border: #e5edf3;
+  --blue: #0067b9;
+  --blue-dark: #004d8a;
+  --blue-deep: #003c6b;
+  --cyan: #00a5d5;
+  --green: #00a86b;
+  --navy: #092b49;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+  --container: 1240px;
+  --radius: 14px;
+}
+
+/* =========================================================
+   RESET & BASE
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 750px;
+}
+
+.section-heading.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin-top: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.section-heading h2 span {
+  color: var(--blue);
+}
+
+.section-heading p {
+  max-width: 640px;
+  margin-top: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 103, 185, 0.3);
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--blue);
+}
+
+.btn-light:hover {
+  background: var(--light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-transparent {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-transparent:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline {
+  color: var(--blue);
+  border: 1px solid rgba(0, 103, 185, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  border-color: var(--blue);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.compliance-page-hero {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(115deg, #f3f9fd 0%, #edf7fc 55%, #ffffff 100%);
+}
+
+.compliance-page-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(rgba(0, 103, 185, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 103, 185, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.compliance-page-hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -160px;
+  top: -180px;
+  border-radius: 50%;
+  border: 70px solid rgba(0, 103, 185, 0.035);
+}
+
+.compliance-page-hero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: -120px;
+  bottom: -150px;
+  border-radius: 50%;
+  border: 45px solid rgba(0, 165, 213, 0.035);
+}
+
+.compliance-page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 80px 0;
+}
+
+/* =========================================================
+   COMPLIANCE EYEBROW
+========================================================= */
+
+.compliance-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.compliance-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 5px rgba(0, 165, 213, 0.1);
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.compliance-page-hero h1 {
+  max-width: 800px;
+  margin: 18px 0 15px;
+  color: var(--dark);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.compliance-page-hero-content > p {
+  max-width: 700px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.compliance-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.compliance-breadcrumb a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.compliance-breadcrumb a:hover {
+  color: var(--blue-dark);
+}
+
+.compliance-breadcrumb i {
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.compliance-breadcrumb span {
+  color: var(--muted);
+}
+
+/* =========================================================
+   COMPLIANCE OVERVIEW
+========================================================= */
+
+.compliance-overview {
+  padding: 105px 0;
+  background: var(--white);
+}
+
+.compliance-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* =========================================================
+   OVERVIEW CONTENT
+========================================================= */
+
+.compliance-overview-content {
+  max-width: 670px;
+}
+
+.compliance-overview-content .section-label {
+  gap: 8px;
+}
+
+.compliance-overview-content h2 {
+  margin-top: 13px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.compliance-overview-content h2 span {
+  display: block;
+  color: var(--blue);
+}
+
+.compliance-overview-content > p {
+  max-width: 640px;
+  margin-top: 19px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+/* =========================================================
+   CHECK LIST
+========================================================= */
+
+.compliance-check-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  margin: 28px 0 32px;
+}
+
+.compliance-check-list div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--dark);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.compliance-check-list i {
+  color: var(--green);
+  font-size: 14px;
+}
+
+/* =========================================================
+   OVERVIEW VISUAL
+========================================================= */
+
+.compliance-overview-visual {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compliance-overview-visual::before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 103, 185, 0.09);
+}
+
+.compliance-overview-visual::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(0, 165, 213, 0.018);
+  border: 1px solid rgba(0, 165, 213, 0.06);
+}
+
+/* =========================================================
+   CERTIFICATE CARD
+========================================================= */
+
+.compliance-certificate-card {
+  position: relative;
+  z-index: 3;
+  width: 390px;
+  min-height: 445px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 17px;
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-2deg);
+  transition: var(--transition);
+}
+
+.compliance-certificate-card:hover {
+  transform: rotate(0deg) translateY(-7px);
+}
+
+/* =========================================================
+   CERTIFICATE TOP
+========================================================= */
+
+.compliance-certificate-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.compliance-certificate-top > span {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.compliance-certificate-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--blue);
+  color: var(--white);
+}
+
+/* =========================================================
+   CERTIFICATE BODY
+========================================================= */
+
+.compliance-certificate-body {
+  min-height: 330px;
+  margin-top: 18px;
+  padding: 38px 20px;
+  text-align: center;
+  border: 1px solid #d6e3eb;
+  background: linear-gradient(145deg, #f1f8fc, #ffffff);
+}
+
+.compliance-certificate-body small {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+}
+
+.compliance-certificate-body h3 {
+  margin-top: 25px;
+  color: var(--blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 55px;
+  line-height: 1;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.compliance-certificate-body strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.compliance-divider {
+  width: 60px;
+  height: 2px;
+  margin: 27px auto 20px;
+  background: var(--cyan);
+}
+
+.compliance-certificate-body p {
+  color: var(--dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.compliance-certificate-body > span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+/* =========================================================
+   CERTIFICATE FOOTER
+========================================================= */
+
+.compliance-certificate-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.compliance-certificate-footer span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.compliance-certificate-footer i {
+  color: var(--green);
+}
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.compliance-floating-card {
+  position: absolute;
+  z-index: 5;
+  right: -5px;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px;
+  background: var(--white);
+  border-radius: 11px;
+  box-shadow: var(--shadow);
+  animation: complianceFloat 4s ease-in-out infinite;
+}
+
+.compliance-floating-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: var(--light-blue);
+  color: var(--blue);
+}
+
+.compliance-floating-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.compliance-floating-card strong {
+  color: var(--dark);
+  font-size: 11px;
+}
+
+.compliance-floating-card span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+@keyframes complianceFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* =========================================================
+   BENEFITS SECTION
+========================================================= */
+
+.compliance-benefits {
+  padding: 105px 0;
+  background: var(--light);
+}
+
+.compliance-benefits .section-heading {
+  margin-bottom: 50px;
+}
+
+/* =========================================================
+   BENEFITS GRID
+========================================================= */
+
+.compliance-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.compliance-benefit-card {
+  min-height: 255px;
+  padding: 27px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.compliance-benefit-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(0, 103, 185, 0.2);
+  box-shadow: var(--shadow);
+}
+
+/* =========================================================
+   BENEFIT ICON
+========================================================= */
+
+.compliance-benefit-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--light-blue);
+  color: var(--blue);
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.compliance-benefit-card:hover .compliance-benefit-icon {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.compliance-benefit-card h3 {
+  margin-bottom: 9px;
+  color: var(--dark);
+  font-size: 16px;
+}
+
+.compliance-benefit-card p {
+  color: var(--text);
+  font-size: 10px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   REQUIREMENTS
+========================================================= */
+
+.compliance-requirements {
+  padding: 105px 0;
+  background: var(--white);
+}
+
+.compliance-requirements-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.compliance-requirements-content h2 {
+  margin-top: 13px;
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.18;
+  letter-spacing: -2px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.compliance-requirements-content h2 span {
+  color: var(--blue);
+}
+
+.compliance-requirements-content > p {
+  max-width: 500px;
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   REQUIREMENTS LIST
+========================================================= */
+
+.compliance-requirements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compliance-requirements-list .requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--light);
+  transition: var(--transition);
+}
+
+.compliance-requirements-list .requirement-item:hover {
+  transform: translateX(5px);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(0, 103, 185, 0.15);
+}
+
+.compliance-requirements-list .requirement-number {
+  width: 42px;
+  flex-shrink: 0;
+  color: var(--blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.compliance-requirements-list .requirement-item h3 {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.compliance-requirements-list .requirement-item p {
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.compliance-process {
+  padding: 105px 0;
+  background: var(--light);
+}
+
+.compliance-process .section-heading {
+  margin-bottom: 55px;
+}
+
+.compliance-process-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.compliance-process-step {
+  text-align: center;
+}
+
+.compliance-process-step .process-number {
+  color: rgba(0, 103, 185, 0.13);
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.compliance-process-step .process-step-icon {
+  width: 70px;
+  height: 70px;
+  margin: 12px auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--blue);
+  font-size: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.compliance-process-step:hover .process-step-icon {
+  background: var(--blue);
+  color: var(--white);
+  transform: scale(1.08);
+}
+
+.compliance-process-step h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.compliance-process-step p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.compliance-process-line {
+  width: 70px;
+  height: 1px;
+  margin-top: 102px;
+  background: var(--border);
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.compliance-page-cta {
+  padding: 78px 0;
+  background: linear-gradient(110deg, var(--blue-deep), var(--blue));
+}
+
+.compliance-page-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+}
+
+.compliance-page-cta .section-label {
+  color: var(--cyan);
+}
+
+.compliance-page-cta h2 {
+  margin-top: 10px;
+  color: var(--white);
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  font-weight: 800;
+}
+
+.compliance-page-cta h2 span {
+  color: var(--cyan);
+}
+
+.compliance-page-cta p {
+  max-width: 590px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.compliance-page-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  background: #071c30;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-grid {
+  padding: 70px 0 50px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+.footer-brand {
+  display: inline-flex;
+}
+
+.footer-brand img {
+  width: 180px;
+  height: 58px;
+  object-fit: contain;
+  object-position: left center;
+  filter: brightness(0) invert(1);
+}
+
+.footer-company > p {
+  max-width: 310px;
+  margin-top: 18px;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.footer-social {
+  display: flex;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  transition: var(--transition);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-social a:hover {
+  color: var(--white);
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-column h3 {
+  margin-bottom: 8px;
+  color: var(--white);
+  font-size: 13px;
+}
+
+.footer-column > a {
+  font-size: 10px;
+  transition: var(--transition);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.footer-column > a:hover {
+  color: var(--cyan);
+  transform: translateX(3px);
+}
+
+.footer-contact a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-contact i {
+  color: var(--cyan);
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-bottom-inner {
+  min-height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+  font-size: 9px;
+}
+
+.footer-bottom a {
+  margin-left: 15px;
+  transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--white);
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 20px;
+  z-index: 999;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #20bd5a;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+}
+
+/* =========================================================
+   BACK TOP
+========================================================= */
+
+.back-top {
+  position: fixed;
+  right: 23px;
+  bottom: 83px;
+  z-index: 998;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  border: none;
+}
+
+.back-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-top:hover {
+  background: var(--blue);
+}
+
+/* =========================================================
+   RESPONSIVE - FOOTER
+========================================================= */
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .footer-company {
+    grid-column: span 2;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 7px;
+  }
+
+  .footer-bottom a {
+    margin: 0 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-company {
+    grid-column: auto;
+  }
+
+  .footer-brand img {
+    width: 160px;
+  }
+
+  .footer-company > p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    padding: 48px 0 35px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom a {
+    font-size: 8px;
+  }
+
+  .whatsapp {
+    right: 12px;
+    bottom: 12px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .back-top {
+    right: 13px;
+    bottom: 68px;
+    width: 37px;
+    height: 37px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - COMPLIANCE PAGE
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+  .compliance-overview-grid {
+    gap: 55px;
+  }
+
+  .compliance-requirements-grid {
+    gap: 55px;
+  }
+
+  .compliance-benefits-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .compliance-benefit-card {
+    padding: 23px;
+  }
+
+  .compliance-page-hero-content {
+    padding: 70px 0;
+  }
+}
+
+/* =========================================================
+   1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+  .compliance-overview-grid {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 35px;
+  }
+
+  .compliance-requirements-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+  }
+
+  .compliance-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .compliance-certificate-card {
+    width: 350px;
+  }
+
+  .compliance-overview-visual::before {
+    width: 390px;
+    height: 390px;
+  }
+
+  .compliance-floating-card {
+    right: -5px;
+  }
+}
+
+/* =========================================================
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+  .compliance-page-hero {
+    min-height: 380px;
+  }
+
+  .compliance-page-hero-content {
+    padding: 65px 0;
+  }
+
+  .compliance-page-hero h1 {
+    font-size: clamp(40px, 7vw, 58px);
+    letter-spacing: -2.5px;
+  }
+
+  .compliance-overview {
+    padding: 80px 0;
+  }
+
+  .compliance-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .compliance-overview-content {
+    max-width: 100%;
+  }
+
+  .compliance-overview-visual {
+    min-height: 500px;
+  }
+
+  .compliance-requirements {
+    padding: 80px 0;
+  }
+
+  .compliance-requirements-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .compliance-process {
+    padding: 80px 0;
+  }
+
+  .compliance-process-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+  }
+
+  .compliance-process-line {
+    display: none;
+  }
+
+  .compliance-page-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .compliance-page-hero {
+    min-height: 350px;
+  }
+
+  .compliance-page-hero-content {
+    padding: 55px 0;
+  }
+
+  .compliance-page-hero h1 {
+    margin: 15px 0;
+    font-size: clamp(36px, 8vw, 52px);
+    letter-spacing: -2px;
+  }
+
+  .compliance-page-hero-content > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .compliance-breadcrumb {
+    margin-top: 20px;
+    font-size: 9px;
+  }
+
+  .compliance-overview {
+    padding: 70px 0;
+  }
+
+  .compliance-overview-content h2 {
+    font-size: clamp(31px, 7vw, 43px);
+    letter-spacing: -1.5px;
+  }
+
+  .compliance-check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-benefits {
+    padding: 70px 0;
+  }
+
+  .compliance-benefits-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+  }
+
+  .compliance-requirements-content h2 {
+    font-size: clamp(31px, 7vw, 43px);
+    letter-spacing: -1.5px;
+  }
+
+  .compliance-process-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .compliance-page-cta {
+    padding: 65px 0;
+  }
+
+  .compliance-page-cta h2 {
+    font-size: clamp(31px, 7vw, 43px);
+  }
+}
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+  .compliance-page-hero {
+    min-height: 330px;
+  }
+
+  .compliance-page-hero-content {
+    padding: 50px 0;
+  }
+
+  .compliance-page-hero h1 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .compliance-page-hero-content > p {
+    font-size: 11px;
+  }
+
+  .compliance-overview {
+    padding: 60px 0;
+  }
+
+  .compliance-overview-grid {
+    gap: 45px;
+  }
+
+  .compliance-overview-content h2 {
+    font-size: 34px;
+  }
+
+  .compliance-overview-content > p {
+    font-size: 11px;
+  }
+
+  .compliance-overview-visual {
+    min-height: 450px;
+  }
+
+  .compliance-overview-visual::before {
+    width: 340px;
+    height: 340px;
+  }
+
+  .compliance-overview-visual::after {
+    width: 280px;
+    height: 280px;
+  }
+
+  .compliance-certificate-card {
+    width: 320px;
+    min-height: 400px;
+    padding: 16px;
+  }
+
+  .compliance-certificate-body {
+    min-height: 290px;
+    padding: 30px 15px;
+  }
+
+  .compliance-certificate-body h3 {
+    font-size: 48px;
+  }
+
+  .compliance-certificate-body strong {
+    font-size: 16px;
+  }
+
+  .compliance-floating-card {
+    right: 0;
+    bottom: 35px;
+    padding: 11px;
+  }
+
+  .compliance-benefits {
+    padding: 60px 0;
+  }
+
+  .compliance-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compliance-benefit-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .compliance-requirements {
+    padding: 60px 0;
+  }
+
+  .compliance-requirements-content h2 {
+    font-size: 34px;
+  }
+
+  .compliance-requirements-list .requirement-item {
+    align-items: flex-start;
+    padding: 17px;
+  }
+
+  .compliance-process {
+    padding: 60px 0;
+  }
+
+  .compliance-page-cta {
+    padding: 60px 0;
+  }
+
+  .compliance-page-cta-inner {
+    gap: 30px;
+  }
+
+  .compliance-page-cta-buttons {
+    width: 100%;
+  }
+
+  .compliance-page-cta-buttons .btn {
+    flex: 1;
+  }
+}
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .compliance-page-hero {
+    min-height: 310px;
+  }
+
+  .compliance-page-hero-content {
+    padding: 45px 0;
+  }
+
+  .compliance-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .compliance-page-hero h1 {
+    font-size: 33px;
+    letter-spacing: -1.2px;
+  }
+
+  .compliance-page-hero-content > p {
+    font-size: 10px;
+    line-height: 1.75;
+  }
+
+  .compliance-breadcrumb {
+    gap: 7px;
+    font-size: 8px;
+  }
+
+  .compliance-overview {
+    padding: 50px 0;
+  }
+
+  .compliance-overview-content h2 {
+    font-size: 30px;
+  }
+
+  .compliance-overview-content > p {
+    font-size: 10px;
+  }
+
+  .compliance-overview-visual {
+    min-height: 400px;
+  }
+
+  .compliance-overview-visual::before {
+    width: 280px;
+    height: 280px;
+  }
+
+  .compliance-overview-visual::after {
+    width: 225px;
+    height: 225px;
+  }
+
+  .compliance-certificate-card {
+    width: 285px;
+    min-height: 360px;
+    padding: 13px;
+  }
+
+  .compliance-certificate-top {
+    padding-bottom: 11px;
+  }
+
+  .compliance-certificate-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .compliance-certificate-body {
+    min-height: 255px;
+    margin-top: 13px;
+    padding: 25px 10px;
+  }
+
+  .compliance-certificate-body small {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+  }
+
+  .compliance-certificate-body h3 {
+    margin-top: 20px;
+    font-size: 42px;
+  }
+
+  .compliance-certificate-body strong {
+    font-size: 14px;
+  }
+
+  .compliance-certificate-body p {
+    font-size: 10px;
+  }
+
+  .compliance-certificate-body > span {
+    font-size: 8px;
+  }
+
+  .compliance-certificate-footer {
+    font-size: 7px;
+  }
+
+  .compliance-floating-card {
+    right: -2px;
+    bottom: 20px;
+    gap: 7px;
+    padding: 9px;
+  }
+
+  .compliance-floating-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .compliance-floating-card strong {
+    font-size: 9px;
+  }
+
+  .compliance-floating-card span {
+    font-size: 7px;
+  }
+
+  .compliance-benefits,
+  .compliance-requirements,
+  .compliance-process {
+    padding: 50px 0;
+  }
+
+  .compliance-requirements-content h2 {
+    font-size: 30px;
+  }
+
+  .compliance-requirements-content > p {
+    font-size: 10px;
+  }
+
+  .compliance-requirements-list .requirement-item {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .compliance-requirements-list .requirement-number {
+    width: 30px;
+    font-size: 12px;
+  }
+
+  .compliance-requirements-list .requirement-item h3 {
+    font-size: 12px;
+  }
+
+  .compliance-requirements-list .requirement-item p {
+    font-size: 9px;
+  }
+
+  .compliance-process-step h3 {
+    font-size: 14px;
+  }
+
+  .compliance-process-step p {
+    font-size: 9px;
+  }
+
+  .compliance-page-cta {
+    padding: 50px 0;
+  }
+
+  .compliance-page-cta h2 {
+    font-size: 30px;
+  }
+
+  .compliance-page-cta p {
+    font-size: 10px;
+  }
+
+  .compliance-page-cta-buttons {
+    flex-direction: column;
+  }
+
+  .compliance-page-cta-buttons .btn {
+    width: 100%;
+    flex: none;
+  }
+}
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .compliance-page-hero-content {
+    padding: 40px 0;
+  }
+
+  .compliance-page-hero h1 {
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+
+  .compliance-page-hero-content > p {
+    font-size: 9px;
+  }
+
+  .compliance-breadcrumb {
+    flex-wrap: wrap;
+    font-size: 7px;
+  }
+
+  .compliance-overview {
+    padding: 45px 0;
+  }
+
+  .compliance-overview-content h2 {
+    font-size: 27px;
+  }
+
+  .compliance-check-list div {
+    font-size: 9px;
+  }
+
+  .compliance-overview-visual {
+    min-height: 355px;
+  }
+
+  .compliance-overview-visual::before {
+    width: 240px;
+    height: 240px;
+  }
+
+  .compliance-overview-visual::after {
+    width: 195px;
+    height: 195px;
+  }
+
+  .compliance-certificate-card {
+    width: 250px;
+    min-height: 325px;
+    padding: 10px;
+  }
+
+  .compliance-certificate-body {
+    min-height: 230px;
+    padding: 20px 8px;
+  }
+
+  .compliance-certificate-body h3 {
+    font-size: 36px;
+  }
+
+  .compliance-certificate-body strong {
+    font-size: 12px;
+  }
+
+  .compliance-certificate-body p {
+    font-size: 9px;
+  }
+
+  .compliance-floating-card {
+    bottom: 10px;
+    padding: 7px;
+  }
+
+  .compliance-floating-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .compliance-floating-card strong {
+    font-size: 8px;
+  }
+
+  .compliance-floating-card span {
+    font-size: 6px;
+  }
+
+  .compliance-benefit-card {
+    padding: 20px;
+  }
+
+  .compliance-benefit-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .compliance-benefit-card h3 {
+    font-size: 13px;
+  }
+
+  .compliance-benefit-card p {
+    font-size: 9px;
+  }
+
+  .compliance-requirements-content h2 {
+    font-size: 27px;
+  }
+
+  .compliance-process-step .process-step-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .compliance-page-cta h2 {
+    font-size: 27px;
+  }
+}
+
+/* =========================================================
+   280px
+========================================================= */
+
+@media (max-width: 280px) {
+  .compliance-page-hero h1 {
+    font-size: 25px;
+  }
+
+  .compliance-eyebrow {
+    font-size: 8px;
+  }
+
+  .compliance-page-hero-content > p {
+    font-size: 8px;
+  }
+
+  .compliance-overview-content h2 {
+    font-size: 24px;
+  }
+
+  .compliance-certificate-card {
+    width: 220px;
+  }
+
+  .compliance-overview-visual::before {
+    width: 210px;
+    height: 210px;
+  }
+
+  .compliance-overview-visual::after {
+    width: 170px;
+    height: 170px;
+  }
+
+  .compliance-floating-card {
+    display: none;
+  }
+
+  .compliance-requirements-content h2 {
+    font-size: 24px;
+  }
+
+  .compliance-requirements-list .requirement-item {
+    gap: 8px;
+    padding: 11px;
+  }
+
+  .compliance-requirements-list .requirement-item h3 {
+    font-size: 10px;
+  }
+
+  .compliance-requirements-list .requirement-item p {
+    font-size: 8px;
+  }
+
+  .compliance-page-cta h2 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   200px
+========================================================= */
+
+@media (max-width: 220px) {
+  .compliance-page-hero h1 {
+    font-size: 21px;
+  }
+
+  .compliance-page-hero-content > p {
+    font-size: 7px;
+  }
+
+  .compliance-breadcrumb {
+    font-size: 6px;
+  }
+
+  .compliance-overview-content h2 {
+    font-size: 21px;
+  }
+
+  .compliance-overview-content > p {
+    font-size: 8px;
+  }
+
+  .compliance-overview-visual {
+    min-height: 290px;
+  }
+
+  .compliance-certificate-card {
+    width: 185px;
+    min-height: 270px;
+    padding: 7px;
+  }
+
+  .compliance-certificate-body {
+    min-height: 190px;
+    padding: 16px 5px;
+  }
+
+  .compliance-certificate-body h3 {
+    font-size: 30px;
+  }
+
+  .compliance-certificate-body strong {
+    font-size: 10px;
+  }
+
+  .compliance-certificate-body p {
+    font-size: 7px;
+  }
+
+  .compliance-certificate-footer {
+    font-size: 5px;
+  }
+
+  .compliance-benefit-card {
+    padding: 15px;
+  }
+
+  .compliance-benefit-card h3 {
+    font-size: 11px;
+  }
+
+  .compliance-benefit-card p {
+    font-size: 7px;
+  }
+
+  .compliance-requirements-content h2 {
+    font-size: 21px;
+  }
+
+  .compliance-page-cta h2 {
+    font-size: 21px;
+  }
+
+  .compliance-page-cta p {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICE IMPROVEMENTS
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+  .compliance-benefit-card:hover,
+  .compliance-requirements-list .requirement-item:hover,
+  .compliance-process-step:hover .process-step-icon,
+  .compliance-certificate-card:hover {
+    transform: none;
+  }
+
+  .btn:hover,
+  .compliance-page-cta-buttons .btn:hover {
+    transform: none;
+  }
+
+  .footer-column > a:hover,
+  .footer-social a:hover {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
