@@ -1,3 +1,10 @@
+/* =========================================================
+   QMSCERT - PROCESS PAGE CSS
+   ========================================================= */
+
+/* =========================================================
+   PROCESS PAGE VARIABLES
+   ========================================================= */
 
 :root {
   --blue: #0067b9;
@@ -48,7 +55,7 @@
 .section-heading h2 {
   margin-top: 12px;
   font-family: "Poppins", sans-serif;
-  font-size: clamp(32px, 3.5vw, 46px);
+  font-size: clamp(32px, 4vw, 46px);
   line-height: 1.15;
   letter-spacing: -2px;
   font-weight: 800;
@@ -191,10 +198,10 @@
   margin-top: 25px;
   margin-bottom: 22px;
   color: var(--white);
-  font-size: clamp(42px, 4.5vw, 64px);
+  font-size: clamp(42px, 5vw, 64px);
   line-height: 1.08;
-  font-weight: 600;
-  letter-spacing: -1.6px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
 }
 
 .process-hero h1 span {
@@ -206,7 +213,7 @@
   max-width: 720px;
   margin: 0;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -417,7 +424,7 @@
 }
 
 /* =========================================================
-   03. MAIN PROCESS TIMELINE
+   03. MAIN PROCESS TIMELINE - FIXED
    ========================================================= */
 
 .main-process {
@@ -435,6 +442,7 @@
   margin: 0 auto;
 }
 
+/* Desktop: Center Line */
 .process-timeline::before {
   content: "";
   position: absolute;
@@ -452,10 +460,15 @@
   );
 }
 
+/* =========================================================
+   TIMELINE ITEMS - DESKTOP
+========================================================= */
+
 .timeline-item {
   position: relative;
   width: 50%;
   padding: 0 60px 65px 0;
+  clear: both;
 }
 
 .timeline-item:nth-child(even) {
@@ -468,6 +481,7 @@
   padding-bottom: 0;
 }
 
+/* Timeline Number - FIXED: Only number, no icon */
 .timeline-number {
   position: absolute;
   top: 0;
@@ -485,6 +499,8 @@
   font-weight: 800;
   box-shadow: 0 7px 20px rgba(9, 43, 73, 0.12);
   z-index: 5;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
 }
 
 .timeline-item:nth-child(even) .timeline-number {
@@ -492,6 +508,7 @@
   right: auto;
 }
 
+/* Timeline Icon - Separate from number */
 .timeline-icon {
   width: 56px;
   height: 56px;
@@ -504,8 +521,10 @@
   color: var(--blue);
   font-size: 20px;
   border: 1px solid #d6edf7;
+  flex-shrink: 0;
 }
 
+/* Timeline Content */
 .timeline-content {
   padding: 26px;
   border: 1px solid var(--border);
@@ -563,6 +582,326 @@
 .timeline-content li i {
   color: var(--green);
   font-size: 11px;
+}
+
+/* =========================================================
+   TIMELINE - RESPONSIVE FIX
+========================================================= */
+
+/* Tablet & Mobile: Single Column */
+@media (max-width: 992px) {
+  .process-timeline {
+    padding-left: 55px;
+  }
+
+  .process-timeline::before {
+    left: 25px;
+    transform: none;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 50px 25px;
+  }
+
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-number,
+  .timeline-item:nth-child(even) .timeline-number {
+    left: -6px;
+    right: auto;
+    width: 52px;
+    height: 52px;
+    font-size: 12px;
+    border-width: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-timeline {
+    padding-left: 50px;
+  }
+
+  .process-timeline::before {
+    left: 22px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+
+  .timeline-number,
+  .timeline-item:nth-child(even) .timeline-number {
+    left: -5px;
+    width: 48px;
+    height: 48px;
+    font-size: 11px;
+    border-width: 4px;
+  }
+
+  .timeline-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .timeline-content {
+    padding: 22px;
+  }
+
+  .timeline-content h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-timeline {
+    padding-left: 40px;
+  }
+
+  .process-timeline::before {
+    left: 18px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 18px;
+    padding-bottom: 35px;
+  }
+
+  .timeline-number,
+  .timeline-item:nth-child(even) .timeline-number {
+    left: -6px;
+    width: 44px;
+    height: 44px;
+    font-size: 10px;
+    border-width: 4px;
+  }
+
+  .timeline-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    margin-bottom: 14px;
+    margin-left: 30px;
+    
+  }
+
+  .timeline-content {
+    padding: 18px;
+  }
+
+  .timeline-content > span {
+    font-size: 9px;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+    margin: 6px 0 8px;
+  }
+
+  .timeline-content p {
+    font-size: 12px;
+  }
+
+  .timeline-content ul {
+    gap: 5px;
+    margin-top: 14px;
+  }
+
+  .timeline-content li {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 400px) {
+  .process-timeline {
+    padding-left: 34px;
+  }
+
+  .process-timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 15px;
+    padding-bottom: 30px;
+  }
+
+  .timeline-number,
+  .timeline-item:nth-child(even) .timeline-number {
+    left: -7px;
+    width: 40px;
+    height: 40px;
+    font-size: 9px;
+    border-width: 3px;
+  }
+
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .timeline-content > span {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .timeline-content h3 {
+    font-size: 15px;
+  }
+
+  .timeline-content p {
+    font-size: 11px;
+  }
+
+  .timeline-content ul {
+    gap: 4px;
+    margin-top: 12px;
+  }
+
+  .timeline-content li {
+    font-size: 10px;
+    gap: 7px;
+  }
+
+  .timeline-content li i {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 320px) {
+  .process-timeline {
+    padding-left: 30px;
+  }
+
+  .process-timeline::before {
+    left: 13px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 12px;
+    padding-bottom: 25px;
+  }
+
+  .timeline-number,
+  .timeline-item:nth-child(even) .timeline-number {
+    left: -7px;
+    width: 36px;
+    height: 36px;
+    font-size: 8px;
+    border-width: 3px;
+  }
+
+  .timeline-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .timeline-content {
+    padding: 12px;
+  }
+
+  .timeline-content > span {
+    font-size: 7px;
+  }
+
+  .timeline-content h3 {
+    font-size: 13px;
+    margin: 4px 0 6px;
+  }
+
+  .timeline-content p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .timeline-content ul {
+    gap: 3px;
+    margin-top: 10px;
+  }
+
+  .timeline-content li {
+    font-size: 9px;
+    gap: 6px;
+  }
+
+  .timeline-content li i {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 240px) {
+  .process-timeline {
+    padding-left: 24px;
+  }
+
+  .process-timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  .timeline-number,
+  .timeline-item:nth-child(even) .timeline-number {
+    left: -8px;
+    width: 30px;
+    height: 30px;
+    font-size: 7px;
+    border-width: 2px;
+  }
+
+  .timeline-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+  }
+
+  .timeline-content {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .timeline-content > span {
+    font-size: 6px;
+  }
+
+  .timeline-content h3 {
+    font-size: 11px;
+  }
+
+  .timeline-content p {
+    font-size: 9px;
+  }
+
+  .timeline-content li {
+    font-size: 8px;
+  }
 }
 
 /* =========================================================
@@ -1137,7 +1476,7 @@
 }
 
 /* =========================================================
-   RESPONSIVE - 1200px
+   RESPONSIVE - HERO & OTHER SECTIONS
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -1153,10 +1492,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* =========================================================
-   RESPONSIVE - 992px
-========================================================= */
 
 @media (max-width: 992px) {
   .process-hero-content {
@@ -1213,10 +1548,6 @@
   }
 }
 
-/* =========================================================
-   RESPONSIVE - 768px
-========================================================= */
-
 @media (max-width: 768px) {
   .process-hero {
     min-height: 380px;
@@ -1251,50 +1582,6 @@
 
   .section-heading h2 {
     font-size: 32px;
-  }
-
-  /* Timeline becomes single column */
-  .process-timeline {
-    padding-left: 50px;
-  }
-
-  .process-timeline::before {
-    left: 22px;
-    transform: none;
-  }
-
-  .timeline-item,
-  .timeline-item:nth-child(even) {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 0 45px 20px;
-  }
-
-  .timeline-item:last-child {
-    padding-bottom: 0;
-  }
-
-  .timeline-number,
-  .timeline-item:nth-child(even) .timeline-number {
-    left: -5px;
-    right: auto;
-    width: 50px;
-    height: 50px;
-    font-size: 12px;
-  }
-
-  .timeline-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-  }
-
-  .timeline-content {
-    padding: 22px;
-  }
-
-  .timeline-content h3 {
-    font-size: 18px;
   }
 
   .process-benefits-grid {
@@ -1333,10 +1620,6 @@
     margin: 0 7px;
   }
 }
-
-/* =========================================================
-   RESPONSIVE - 576px
-========================================================= */
 
 @media (max-width: 576px) {
   .process-hero {
@@ -1418,45 +1701,6 @@
 
   .section-heading h2 {
     font-size: 28px;
-  }
-
-  .process-timeline {
-    padding-left: 38px;
-  }
-
-  .process-timeline::before {
-    left: 17px;
-  }
-
-  .timeline-item,
-  .timeline-item:nth-child(even) {
-    padding-left: 18px;
-    padding-bottom: 35px;
-  }
-
-  .timeline-number,
-  .timeline-item:nth-child(even) .timeline-number {
-    left: -6px;
-    width: 44px;
-    height: 44px;
-    border-width: 4px;
-    font-size: 10px;
-  }
-
-  .timeline-content {
-    padding: 18px;
-  }
-
-  .timeline-content h3 {
-    font-size: 16px;
-  }
-
-  .timeline-content p {
-    font-size: 12px;
-  }
-
-  .timeline-content li {
-    font-size: 11px;
   }
 
   .process-benefits-grid {
@@ -1577,10 +1821,6 @@
   }
 }
 
-/* =========================================================
-   RESPONSIVE - 400px
-========================================================= */
-
 @media (max-width: 400px) {
   .process-hero h1 {
     font-size: 28px;
@@ -1596,47 +1836,6 @@
 
   .section-heading h2 {
     font-size: 26px;
-  }
-
-  .process-timeline {
-    padding-left: 32px;
-  }
-
-  .process-timeline::before {
-    left: 15px;
-  }
-
-  .timeline-item,
-  .timeline-item:nth-child(even) {
-    padding-left: 15px;
-  }
-
-  .timeline-number,
-  .timeline-item:nth-child(even) .timeline-number {
-    left: -7px;
-    width: 40px;
-    height: 40px;
-    font-size: 9px;
-  }
-
-  .timeline-content {
-    padding: 15px;
-  }
-
-  .timeline-content > span {
-    font-size: 8px;
-  }
-
-  .timeline-content h3 {
-    font-size: 15px;
-  }
-
-  .timeline-content p {
-    font-size: 11px;
-  }
-
-  .timeline-content li {
-    font-size: 10px;
   }
 
   .process-preparation-content h2 {
@@ -1690,10 +1889,6 @@
   }
 }
 
-/* =========================================================
-   RESPONSIVE - 320px
-========================================================= */
-
 @media (max-width: 320px) {
   .process-hero h1 {
     font-size: 25px;
@@ -1715,44 +1910,6 @@
 
   .section-heading h2 {
     font-size: 23px;
-  }
-
-  .process-timeline {
-    padding-left: 28px;
-  }
-
-  .process-timeline::before {
-    left: 13px;
-  }
-
-  .timeline-item,
-  .timeline-item:nth-child(even) {
-    padding-left: 12px;
-  }
-
-  .timeline-number,
-  .timeline-item:nth-child(even) .timeline-number {
-    left: -7px;
-    width: 36px;
-    height: 36px;
-    font-size: 8px;
-    border-width: 3px;
-  }
-
-  .timeline-content {
-    padding: 12px;
-  }
-
-  .timeline-content h3 {
-    font-size: 14px;
-  }
-
-  .timeline-content p {
-    font-size: 10px;
-  }
-
-  .timeline-content li {
-    font-size: 9px;
   }
 
   .process-benefit-card {
@@ -1832,10 +1989,6 @@
   }
 }
 
-/* =========================================================
-   RESPONSIVE - 240px
-========================================================= */
-
 @media (max-width: 240px) {
   .process-hero h1 {
     font-size: 22px;
@@ -1851,55 +2004,6 @@
 
   .section-heading h2 {
     font-size: 20px;
-  }
-
-  .process-timeline {
-    padding-left: 22px;
-  }
-
-  .process-timeline::before {
-    left: 10px;
-  }
-
-  .timeline-item,
-  .timeline-item:nth-child(even) {
-    padding-left: 10px;
-    padding-bottom: 25px;
-  }
-
-  .timeline-number,
-  .timeline-item:nth-child(even) .timeline-number {
-    left: -8px;
-    width: 30px;
-    height: 30px;
-    font-size: 7px;
-    border-width: 2px;
-  }
-
-  .timeline-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .timeline-content {
-    padding: 10px;
-  }
-
-  .timeline-content > span {
-    font-size: 7px;
-  }
-
-  .timeline-content h3 {
-    font-size: 12px;
-  }
-
-  .timeline-content p {
-    font-size: 9px;
-  }
-
-  .timeline-content li {
-    font-size: 8px;
   }
 
   .process-cta h2 {
