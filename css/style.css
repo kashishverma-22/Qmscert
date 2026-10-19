@@ -4722,3 +4722,14 @@ section p:not(.form-note):not(.form-error) {
     font-size: 13px !important;
   }
 }
+
+/* Keep QMS logos consistently 140px wide across all pages */
+.brand img {
+  width: 140px !important;
+  height: auto !important;
+}
+.footer-brand img {
+  width: 140px !important;
+  height: auto !important;
+}
+

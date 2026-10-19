@@ -1789,7 +1789,7 @@
 }
 /* Shared medium footer logo and contact icon sizing */
 .footer-brand img {
-  width: clamp(110px, 14vw, 160px) !important;
+  width: 140px !important;
   height: auto !important;
 }
 
