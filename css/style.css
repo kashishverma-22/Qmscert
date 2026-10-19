@@ -178,8 +178,8 @@ img {
 }
 
 .brand img {
-  width: 100px;
-  height: 62px;
+  width: 190px;
+  height: 60px;
   object-fit: contain;
   object-position: left center;
 }
@@ -2045,8 +2045,8 @@ img {
 }
 
 .footer-brand img {
-  width: 180px;
-  height: 58px;
+  width: 190px !important;
+  height: 60px;
 
   object-fit: contain;
 
@@ -2060,7 +2060,7 @@ img {
 
   margin-top: 18px;
 
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.8;
 }
 
@@ -2083,7 +2083,7 @@ img {
   align-items: center;
   justify-content: center;
 
-  font-size: 10px;
+  font-size: 13px;
 
   transition: var(--transition);
 }
@@ -2110,7 +2110,7 @@ img {
 }
 
 .footer-column > a {
-  font-size: 10px;
+  font-size: 13px;
 
   transition: var(--transition);
 }
@@ -2124,6 +2124,11 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 13px;
+}
+
+.footer-contact h3 {
+  font-size: 16px;
 }
 
 .footer-contact i {
@@ -2135,8 +2140,31 @@ img {
   align-items: flex-start;
   gap: 8px;
 
-  font-size: 10px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.footer-ascb-link {
+  display: inline-flex;
+  margin-top: 7px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid var(--cyan);
+  border-radius: 8px;
+
+}
+
+.footer-ascb-link img {
+  display: block;
+  width: 112px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.footer-ascb-link:hover {
+  border-color: var(--blue);
+  box-shadow: 0 5px 16px rgba(0, 165, 213, 0.22);
+
 }
 
 .footer-bottom {
@@ -2377,19 +2405,19 @@ img {
   }
 
   .brand img {
-    width: 90px;
-    height: 55px;
+    width: 190px;
+    height: 60px;
   }
 
   .nav-link,
   .dropdown-toggle {
-    font-size: 11px;
+    font-size: 12px;
     padding: 9px 7px;
   }
 
   .nav-btn {
     min-height: 40px;
-    font-size: 11px;
+    font-size: 12px;
     padding: 0 12px;
   }
 
@@ -2842,8 +2870,8 @@ img {
 
   /* HEADER */
   .brand img {
-    width: 88px;
-    height: 53px;
+    width: 190px;
+    height: 60px;
   }
 
   /* HERO */
@@ -3134,7 +3162,7 @@ img {
   }
 
   .topbar-left span {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   /* HEADER */
@@ -3143,8 +3171,8 @@ img {
   }
 
   .brand img {
-    width: 82px;
-    height: 50px;
+    width: 190px;
+    height: 60px;
   }
 
   .menu-toggle {
@@ -3488,7 +3516,7 @@ img {
   }
 
   .footer-brand img {
-    width: 160px;
+    width: 175px !important;
   }
 
   .footer-company > p {
@@ -3517,13 +3545,13 @@ img {
 
   /* TOPBAR */
   .topbar-left span {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   /* NAV */
   .brand img {
-    width: 76px;
-    height: 47px;
+    width: 175px;
+    height: 55px;
   }
 
   .menu-toggle {
@@ -3739,7 +3767,7 @@ img {
   }
 
   .topbar-left span {
-    font-size: 7px;
+    font-size: 10px;
   }
 
   .navbar {
@@ -3747,8 +3775,8 @@ img {
   }
 
   .brand img {
-    width: 70px;
-    height: 43px;
+    width: 175px;
+    height: 55px;
   }
 
   .menu-toggle {
@@ -3936,6 +3964,15 @@ img {
   .footer-contact p {
     font-size: 9px;
   }
+
+  .footer-contact h3 {
+    font-size: 14px;
+  }
+
+  .footer-contact a,
+  .footer-contact p {
+    font-size: 12px;
+  }
 }
 
 /* =========================================================
@@ -3956,8 +3993,8 @@ img {
   }
 
   .brand img {
-    width: 65px;
-    height: 40px;
+    width: 155px;
+    height: 48px;
   }
 
   .menu-toggle {
@@ -4267,7 +4304,7 @@ img {
   }
 
   .footer-brand img {
-    width: 140px;
+    width: 155px !important;
   }
 
   .footer-company > p {
@@ -4281,6 +4318,15 @@ img {
   .footer-column > a,
   .footer-contact p {
     font-size: 8px;
+  }
+
+  .footer-contact h3 {
+    font-size: 12px;
+  }
+
+  .footer-contact a,
+  .footer-contact p {
+    font-size: 11px;
   }
 
   .footer-social a {
@@ -4316,8 +4362,8 @@ img {
   }
 
   .brand img {
-    width: 58px;
-    height: 36px;
+    width: 125px;
+    height: 40px;
   }
 
   .menu-toggle {
@@ -4444,7 +4490,7 @@ img {
   }
 
   .footer-brand img {
-    width: 120px;
+    width: 125px !important;
   }
 }
 
@@ -4486,5 +4532,188 @@ img {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Consistent, medium-sized content typography across all pages */
+section h1,
+section .about-page-hero h1,
+section .contact-hero h1,
+section .compliance-page-hero h1,
+section .industries-hero h1,
+section .iso-page-hero h1,
+section .process-hero h1 {
+  font-size: clamp(34px, 3.5vw, 44px) !important;
+  line-height: 1.18;
+}
+
+section .section-heading h2,
+section .cta h2,
+section .about-content h2,
+section .recognition h2,
+section .consultation-content h2,
+section .about-page-content h2,
+section .about-why-content h2,
+section .about-page-cta h2,
+section .contact-intro-heading h2,
+section .contact-details h2,
+section .location-heading h2,
+section .support-content h2,
+section .compliance-overview-content h2,
+section .compliance-requirements-content h2,
+section .compliance-page-cta h2,
+section .industries-intro-content h2,
+section .industries-why-content h2,
+section .industries-cta h2,
+section .iso-overview-content h2,
+section .iso-requirements-content h2,
+section .iso-page-cta h2,
+section .process-intro-content h2,
+section .process-preparation-content h2,
+section .process-cta h2 {
+  font-size: clamp(28px, 2.8vw, 36px) !important;
+  line-height: 1.25;
+}
+
+section h3:not(.iso-certificate-body h3):not(.compliance-certificate-body h3) {
+  font-size: 19px !important;
+  line-height: 1.35;
+}
+
+section p:not(.form-note):not(.form-error) {
+  font-size: 15px !important;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  section h1,
+  section .about-page-hero h1,
+  section .contact-hero h1,
+  section .compliance-page-hero h1,
+  section .industries-hero h1,
+  section .iso-page-hero h1,
+  section .process-hero h1 {
+    font-size: clamp(32px, 6vw, 38px) !important;
+  }
+
+  section .section-heading h2,
+  section .cta h2,
+  section .about-content h2,
+  section .recognition h2,
+  section .consultation-content h2,
+  section .about-page-content h2,
+  section .about-why-content h2,
+  section .about-page-cta h2,
+  section .contact-intro-heading h2,
+  section .contact-details h2,
+  section .location-heading h2,
+  section .support-content h2,
+  section .compliance-overview-content h2,
+  section .compliance-requirements-content h2,
+  section .compliance-page-cta h2,
+  section .industries-intro-content h2,
+  section .industries-why-content h2,
+  section .industries-cta h2,
+  section .iso-overview-content h2,
+  section .iso-requirements-content h2,
+  section .iso-page-cta h2,
+  section .process-intro-content h2,
+  section .process-preparation-content h2,
+  section .process-cta h2 {
+    font-size: 31px !important;
+  }
+
+  section p:not(.form-note):not(.form-error) {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section h1,
+  section .about-page-hero h1,
+  section .contact-hero h1,
+  section .compliance-page-hero h1,
+  section .industries-hero h1,
+  section .iso-page-hero h1,
+  section .process-hero h1 {
+    font-size: 32px !important;
+  }
+
+  section .section-heading h2,
+  section .cta h2,
+  section .about-content h2,
+  section .recognition h2,
+  section .consultation-content h2,
+  section .about-page-content h2,
+  section .about-why-content h2,
+  section .about-page-cta h2,
+  section .contact-intro-heading h2,
+  section .contact-details h2,
+  section .location-heading h2,
+  section .support-content h2,
+  section .compliance-overview-content h2,
+  section .compliance-requirements-content h2,
+  section .compliance-page-cta h2,
+  section .industries-intro-content h2,
+  section .industries-why-content h2,
+  section .industries-cta h2,
+  section .iso-overview-content h2,
+  section .iso-requirements-content h2,
+  section .iso-page-cta h2,
+  section .process-intro-content h2,
+  section .process-preparation-content h2,
+  section .process-cta h2 {
+    font-size: 28px !important;
+  }
+
+  section h3:not(.iso-certificate-body h3):not(.compliance-certificate-body h3) {
+    font-size: 18px !important;
+  }
+
+  section p:not(.form-note):not(.form-error) {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  section h1,
+  section .about-page-hero h1,
+  section .contact-hero h1,
+  section .compliance-page-hero h1,
+  section .industries-hero h1,
+  section .iso-page-hero h1,
+  section .process-hero h1 {
+    font-size: 30px !important;
+  }
+
+  section .section-heading h2,
+  section .cta h2,
+  section .about-content h2,
+  section .recognition h2,
+  section .consultation-content h2,
+  section .about-page-content h2,
+  section .about-why-content h2,
+  section .about-page-cta h2,
+  section .contact-intro-heading h2,
+  section .contact-details h2,
+  section .location-heading h2,
+  section .support-content h2,
+  section .compliance-overview-content h2,
+  section .compliance-requirements-content h2,
+  section .compliance-page-cta h2,
+  section .industries-intro-content h2,
+  section .industries-why-content h2,
+  section .industries-cta h2,
+  section .iso-overview-content h2,
+  section .iso-requirements-content h2,
+  section .iso-page-cta h2,
+  section .process-intro-content h2,
+  section .process-preparation-content h2,
+  section .process-cta h2 {
+    font-size: 26px !important;
+  }
+
+  section p:not(.form-note):not(.form-error) {
+    font-size: 13px !important;
   }
 }
