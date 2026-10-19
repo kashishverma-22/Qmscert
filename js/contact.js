@@ -1,5 +1,5 @@
 /* =========================================================
-   QMSCERT CONTACT PAGE JAVASCRIPT
+   QMS Global CONTACT PAGE JAVASCRIPT
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* =========================================================
-   QMSCERT CONTACT PAGE JAVASCRIPT
+   QMS Global CONTACT PAGE JAVASCRIPT
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {

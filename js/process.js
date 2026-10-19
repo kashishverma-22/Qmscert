@@ -1,5 +1,5 @@
 /* =========================================================
-   QMSCERT - PROCESS PAGE JAVASCRIPT
+   QMS Global - PROCESS PAGE JAVASCRIPT
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -252,11 +252,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  console.log("QMSCERT Process Page JS Loaded Successfully");
+  console.log("QMS Global Process Page JS Loaded Successfully");
 });
 
 /* =========================================================
-   QMSCERT - PROCESS PAGE JAVASCRIPT
+   QMS Global - PROCESS PAGE JAVASCRIPT
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {

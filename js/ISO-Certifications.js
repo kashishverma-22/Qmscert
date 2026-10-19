@@ -889,7 +889,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ctaTitle) ctaTitle.textContent = data.code + " Certification?";
 
     // ========== PAGE TITLE ==========
-    document.title = data.code + " | QMSCERT";
+    document.title = data.code + " | QMS Global";
 
     // Update URL without reload
     const url = new URL(window.location);

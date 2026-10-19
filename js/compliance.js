@@ -468,7 +468,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (ctaTitle) ctaTitle.textContent = data.shortTitle + " Compliance?";
 
     // ========== PAGE TITLE ==========
-    document.title = data.shortTitle + " | QMSCERT";
+    document.title = data.shortTitle + " | QMS Global";
 
     // Update URL without reload
     const url = new URL(window.location);
