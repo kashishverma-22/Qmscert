@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/* Inactive reference palette: --qms-primary: #063B63; --qms-accent: #E13B45; --qms-text: #111827; --qms-background: #FFFFFF; --qms-muted: #64748B. Previous site colors are active below. */
+
 :root {
   --blue: #0067b9;
   --blue-dark: #004b88;
@@ -179,8 +181,8 @@ img {
 }
 
 .brand img {
-  width: 190px;
-  height: 60px;
+  width: 160px;
+  height: 52px;
   object-fit: contain;
   object-position: left center;
 }
@@ -2046,8 +2048,8 @@ img {
 }
 
 .footer-brand img {
-  width: 190px !important;
-  height: 60px;
+  width: 160px !important;
+  height: 52px;
 
   object-fit: contain;
 
@@ -2134,6 +2136,8 @@ img {
 
 .footer-contact i {
   color: var(--cyan);
+  font-size: 15px;
+  flex-shrink: 0;
 }
 
 .footer-contact p {
@@ -2406,8 +2410,8 @@ img {
   }
 
   .brand img {
-    width: 190px;
-    height: 60px;
+    width: 160px;
+    height: 52px;
   }
 
   .nav-link,
@@ -2871,8 +2875,8 @@ img {
 
   /* HEADER */
   .brand img {
-    width: 190px;
-    height: 60px;
+    width: 160px;
+    height: 52px;
   }
 
   /* HERO */
@@ -3172,8 +3176,8 @@ img {
   }
 
   .brand img {
-    width: 190px;
-    height: 60px;
+    width: 160px;
+    height: 52px;
   }
 
   .menu-toggle {
@@ -3517,7 +3521,7 @@ img {
   }
 
   .footer-brand img {
-    width: 175px !important;
+    width: 145px !important;
   }
 
   .footer-company > p {
@@ -3551,8 +3555,8 @@ img {
 
   /* NAV */
   .brand img {
-    width: 175px;
-    height: 55px;
+    width: 145px;
+    height: 48px;
   }
 
   .menu-toggle {
@@ -3776,8 +3780,8 @@ img {
   }
 
   .brand img {
-    width: 175px;
-    height: 55px;
+    width: 145px;
+    height: 48px;
   }
 
   .menu-toggle {
@@ -3994,8 +3998,8 @@ img {
   }
 
   .brand img {
-    width: 155px;
-    height: 48px;
+    width: 125px;
+    height: 42px;
   }
 
   .menu-toggle {
@@ -4305,7 +4309,7 @@ img {
   }
 
   .footer-brand img {
-    width: 155px !important;
+    width: 125px !important;
   }
 
   .footer-company > p {
@@ -4363,8 +4367,8 @@ img {
   }
 
   .brand img {
-    width: 125px;
-    height: 40px;
+    width: 110px;
+    height: 38px;
   }
 
   .menu-toggle {
@@ -4491,7 +4495,7 @@ img {
   }
 
   .footer-brand img {
-    width: 125px !important;
+    width: 110px !important;
   }
 }
 

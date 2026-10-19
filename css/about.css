@@ -1,3 +1,4 @@
+/* Inactive reference palette: --qms-primary: #063B63; --qms-accent: #E13B45; --qms-text: #111827; --qms-background: #FFFFFF; --qms-muted: #64748B. Previous site colors are active below. */
 /* =========================================================
    ABOUT PAGE HERO
 ========================================================= */
@@ -2035,4 +2036,15 @@
     padding: 0 10px;
     font-size: 8px;
   }
+}
+
+/* Shared medium footer logo and contact icon sizing */
+.footer-brand img {
+  width: clamp(110px, 14vw, 160px) !important;
+  height: auto !important;
+}
+
+.footer-contact i {
+  font-size: 15px !important;
+  flex-shrink: 0;
 }
